@@ -40,11 +40,45 @@ The Meta model is not a simple search box. It runs as an agent with tools:
 | `nearest_location` | Ranks locations by distance from the requesting OR |
 | `dispatch_request` | Alerts all associates in the core and tracks Accepted / Delivered |
 
+## Works with any inventory system
+
+Hospitals run different inventory systems (Epic, Lawson/Infor, PAR Excellence, Omnicell, custom SQL databases). The app and the agent never talk to a system directly. They use one standard interface, and each system plugs in through a small **adapter**:
+
+```
+ Nurse app ─┐                        ┌─ JSON adapter    (demo data)
+            ├─► Agent ─► Inventory ──┼─ CSV adapter     (any system's export)
+Associate ──┘          interface     ├─ SQL adapter     (any SQL database, queries set in config)
+ app                                 └─ Epic / FHIR     (template for hospital IT)
+```
+
+The interface has three calls: `list_items`, `list_locations` and `get_stock`. Connecting a new system means writing one file in `backend/app/inventory/` and setting `INVENTORY_SOURCE`. The tests check that every adapter returns the same data.
+
+## Run it locally
+
+```bash
+pip install -r requirements-dev.txt
+python data/generate_catalog.py        # rebuild the made-up catalog (optional)
+uvicorn app.main:app --app-dir backend --reload
+# open http://localhost:8000
+pytest                                  # run the tests
+```
+
+## Project structure
+
+```
+backend/app/main.py            API
+backend/app/inventory/         adapter interface and adapters
+data/generate_catalog.py       builds the made-up catalog
+data/catalog.json              291 items, 15 locations, stock levels
+frontend/                      web app for nurses and associates
+tests/                         automated tests
+```
+
 ## Roadmap (built during the hackathon)
 
 All code, data and assets in this repo were created during the event. Each day's work is in the commit history.
 
-- [ ] **Day 1, Oct 30:** README, roadmap, project setup, made-up catalog of about 300 surgical items with nicknames and stock by location
+- [x] **Day 1, Oct 30:** README, roadmap, project setup, inventory adapter layer (JSON, CSV, SQL, Epic template), made-up catalog of 291 surgical items with nicknames and stock by location
 - [ ] **Day 2, Oct 31:** Item search with typed input and the agent's `find_item` tool
 - [ ] **Day 3, Nov 1:** Voice input, stock lookup and nearest-location ranking
 - [ ] **Day 4, Nov 2:** Nurse screen: confirm item, photo and quantity, then submit
