@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surgical Item Finder</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 16px; background: #f6f8fa; color: #1f2328; }
+    main { max-width: 480px; margin: 0 auto; }
+    input { width: 100%; padding: 12px; font-size: 18px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 8px; }
+    li { background: #fff; margin: 8px 0; padding: 10px; border-radius: 8px; list-style: none; }
+    ul { padding: 0; }
+    small { color: #59636e; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Surgical Item Finder</h1>
+  <p><small>Day 1 preview: plain keyword search. The AI agent search arrives on Day 2.</small></p>
+  <input id="q" placeholder="Type an item, e.g. lap sponge" autofocus>
+  <ul id="results"></ul>
+</main>
+<script>
+  const q = document.getElementById('q');
+  const results = document.getElementById('results');
+  let timer;
+  q.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      if (!q.value.trim()) { results.innerHTML = ''; return; }
+      const res = await fetch('/api/items?q=' + encodeURIComponent(q.value));
+      const items = await res.json();
+      results.innerHTML = '';
+      for (const i of items) {
+        const li = document.createElement('li');
+        li.innerHTML = '<strong></strong><br><small></small>';
+        li.querySelector('strong').textContent = i.name;
+        li.querySelector('small').textContent = '#' + i.item_number + ' · ' + i.category;
+        results.appendChild(li);
+      }
+    }, 200);
+  });
+</script>
+</body>
+</html>
