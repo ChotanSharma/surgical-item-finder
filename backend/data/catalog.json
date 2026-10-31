@@ -1,0 +1,7730 @@
+{
+  "locations": [
+    {
+      "id": "OR-01",
+      "name": "Operating Room 1",
+      "kind": "or"
+    },
+    {
+      "id": "OR-02",
+      "name": "Operating Room 2",
+      "kind": "or"
+    },
+    {
+      "id": "OR-03",
+      "name": "Operating Room 3",
+      "kind": "or"
+    },
+    {
+      "id": "OR-04",
+      "name": "Operating Room 4",
+      "kind": "or"
+    },
+    {
+      "id": "OR-05",
+      "name": "Operating Room 5",
+      "kind": "or"
+    },
+    {
+      "id": "OR-06",
+      "name": "Operating Room 6",
+      "kind": "or"
+    },
+    {
+      "id": "OR-07",
+      "name": "Operating Room 7",
+      "kind": "or"
+    },
+    {
+      "id": "OR-08",
+      "name": "Operating Room 8",
+      "kind": "or"
+    },
+    {
+      "id": "OR-09",
+      "name": "Operating Room 9",
+      "kind": "or"
+    },
+    {
+      "id": "OR-10",
+      "name": "Operating Room 10",
+      "kind": "or"
+    },
+    {
+      "id": "OR-11",
+      "name": "Operating Room 11",
+      "kind": "or"
+    },
+    {
+      "id": "OR-12",
+      "name": "Operating Room 12",
+      "kind": "or"
+    },
+    {
+      "id": "CORE-A",
+      "name": "Core A (ORs 1-6)",
+      "kind": "core"
+    },
+    {
+      "id": "CORE-B",
+      "name": "Core B (ORs 7-12)",
+      "kind": "core"
+    },
+    {
+      "id": "ORMC",
+      "name": "OR Materials Core",
+      "kind": "ormc"
+    }
+  ],
+  "items": [
+    {
+      "item_number": "SIF-10001",
+      "mpn": "MP-770487",
+      "name": "Polyglactin Braided Absorbable Suture 0 CT-1",
+      "nicknames": [
+        "vicryl 0",
+        "vic 0",
+        "vicryl 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 194
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 15
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10002",
+      "mpn": "MP-809570",
+      "name": "Polyglactin Braided Absorbable Suture 0 SH",
+      "nicknames": [
+        "vicryl 0",
+        "vic 0",
+        "vicryl 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 144
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 28
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10003",
+      "mpn": "MP-329258",
+      "name": "Polyglactin Braided Absorbable Suture 2-0 CT-1",
+      "nicknames": [
+        "vicryl 2-0",
+        "vic 2-0",
+        "vicryl 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 159
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10004",
+      "mpn": "MP-835392",
+      "name": "Polyglactin Braided Absorbable Suture 2-0 SH",
+      "nicknames": [
+        "vicryl 2-0",
+        "vic 2-0",
+        "vicryl 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 61
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10005",
+      "mpn": "MP-106814",
+      "name": "Polyglactin Braided Absorbable Suture 3-0 CT-1",
+      "nicknames": [
+        "vicryl 3-0",
+        "vic 3-0",
+        "vicryl 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 45
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 22
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10006",
+      "mpn": "MP-900581",
+      "name": "Polyglactin Braided Absorbable Suture 3-0 SH",
+      "nicknames": [
+        "vicryl 3-0",
+        "vic 3-0",
+        "vicryl 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 28
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10007",
+      "mpn": "MP-733052",
+      "name": "Polyglactin Braided Absorbable Suture 4-0 CT-1",
+      "nicknames": [
+        "vicryl 4-0",
+        "vic 4-0",
+        "vicryl 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 16
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 25
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10008",
+      "mpn": "MP-182627",
+      "name": "Polyglactin Braided Absorbable Suture 4-0 SH",
+      "nicknames": [
+        "vicryl 4-0",
+        "vic 4-0",
+        "vicryl 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 165
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10009",
+      "mpn": "MP-148050",
+      "name": "Polyglactin Braided Absorbable Suture 5-0 CT-1",
+      "nicknames": [
+        "vicryl 5-0",
+        "vic 5-0",
+        "vicryl 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 79
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10010",
+      "mpn": "MP-205907",
+      "name": "Polyglactin Braided Absorbable Suture 5-0 SH",
+      "nicknames": [
+        "vicryl 5-0",
+        "vic 5-0",
+        "vicryl 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 121
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10011",
+      "mpn": "MP-319684",
+      "name": "Polydioxanone Monofilament Absorbable Suture 0 CT-1",
+      "nicknames": [
+        "pds 0",
+        "pds 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 184
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10012",
+      "mpn": "MP-765822",
+      "name": "Polydioxanone Monofilament Absorbable Suture 0 SH",
+      "nicknames": [
+        "pds 0",
+        "pds 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 191
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10013",
+      "mpn": "MP-330283",
+      "name": "Polydioxanone Monofilament Absorbable Suture 2-0 CT-1",
+      "nicknames": [
+        "pds 2-0",
+        "pds 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10014",
+      "mpn": "MP-520651",
+      "name": "Polydioxanone Monofilament Absorbable Suture 2-0 SH",
+      "nicknames": [
+        "pds 2-0",
+        "pds 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 59
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 21
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10015",
+      "mpn": "MP-322955",
+      "name": "Polydioxanone Monofilament Absorbable Suture 3-0 CT-1",
+      "nicknames": [
+        "pds 3-0",
+        "pds 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 106
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10016",
+      "mpn": "MP-377746",
+      "name": "Polydioxanone Monofilament Absorbable Suture 3-0 SH",
+      "nicknames": [
+        "pds 3-0",
+        "pds 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 195
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10017",
+      "mpn": "MP-549245",
+      "name": "Polydioxanone Monofilament Absorbable Suture 4-0 CT-1",
+      "nicknames": [
+        "pds 4-0",
+        "pds 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 107
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 9
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10018",
+      "mpn": "MP-892495",
+      "name": "Polydioxanone Monofilament Absorbable Suture 4-0 SH",
+      "nicknames": [
+        "pds 4-0",
+        "pds 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-A",
+          "quantity": 11
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10019",
+      "mpn": "MP-542666",
+      "name": "Polydioxanone Monofilament Absorbable Suture 5-0 CT-1",
+      "nicknames": [
+        "pds 5-0",
+        "pds 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 103
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10020",
+      "mpn": "MP-112038",
+      "name": "Polydioxanone Monofilament Absorbable Suture 5-0 SH",
+      "nicknames": [
+        "pds 5-0",
+        "pds 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10021",
+      "mpn": "MP-905934",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 0 CT-1",
+      "nicknames": [
+        "monocryl 0",
+        "mono 0",
+        "monocryl 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 33
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 11
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 17
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10022",
+      "mpn": "MP-624902",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 0 SH",
+      "nicknames": [
+        "monocryl 0",
+        "mono 0",
+        "monocryl 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 134
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10023",
+      "mpn": "MP-412942",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 2-0 CT-1",
+      "nicknames": [
+        "monocryl 2-0",
+        "mono 2-0",
+        "monocryl 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 134
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 10
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 11
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10024",
+      "mpn": "MP-665579",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 2-0 SH",
+      "nicknames": [
+        "monocryl 2-0",
+        "mono 2-0",
+        "monocryl 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 140
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10025",
+      "mpn": "MP-120422",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 3-0 CT-1",
+      "nicknames": [
+        "monocryl 3-0",
+        "mono 3-0",
+        "monocryl 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 97
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10026",
+      "mpn": "MP-422451",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 3-0 SH",
+      "nicknames": [
+        "monocryl 3-0",
+        "mono 3-0",
+        "monocryl 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 66
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10027",
+      "mpn": "MP-189814",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 4-0 CT-1",
+      "nicknames": [
+        "monocryl 4-0",
+        "mono 4-0",
+        "monocryl 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 22
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10028",
+      "mpn": "MP-234628",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 4-0 SH",
+      "nicknames": [
+        "monocryl 4-0",
+        "mono 4-0",
+        "monocryl 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 145
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10029",
+      "mpn": "MP-543692",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 5-0 CT-1",
+      "nicknames": [
+        "monocryl 5-0",
+        "mono 5-0",
+        "monocryl 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 143
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10030",
+      "mpn": "MP-518373",
+      "name": "Poliglecaprone Monofilament Absorbable Suture 5-0 SH",
+      "nicknames": [
+        "monocryl 5-0",
+        "mono 5-0",
+        "monocryl 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 171
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10031",
+      "mpn": "MP-335612",
+      "name": "Polypropylene Monofilament Suture 0 CT-1",
+      "nicknames": [
+        "prolene 0",
+        "pro 0",
+        "prolene 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 10
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 15
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10032",
+      "mpn": "MP-174441",
+      "name": "Polypropylene Monofilament Suture 0 SH",
+      "nicknames": [
+        "prolene 0",
+        "pro 0",
+        "prolene 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 20
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10033",
+      "mpn": "MP-174299",
+      "name": "Polypropylene Monofilament Suture 2-0 CT-1",
+      "nicknames": [
+        "prolene 2-0",
+        "pro 2-0",
+        "prolene 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 76
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 14
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 37
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10034",
+      "mpn": "MP-704201",
+      "name": "Polypropylene Monofilament Suture 2-0 SH",
+      "nicknames": [
+        "prolene 2-0",
+        "pro 2-0",
+        "prolene 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 126
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10035",
+      "mpn": "MP-790993",
+      "name": "Polypropylene Monofilament Suture 3-0 CT-1",
+      "nicknames": [
+        "prolene 3-0",
+        "pro 3-0",
+        "prolene 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 113
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 4
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10036",
+      "mpn": "MP-163556",
+      "name": "Polypropylene Monofilament Suture 3-0 SH",
+      "nicknames": [
+        "prolene 3-0",
+        "pro 3-0",
+        "prolene 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 91
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10037",
+      "mpn": "MP-299448",
+      "name": "Polypropylene Monofilament Suture 4-0 CT-1",
+      "nicknames": [
+        "prolene 4-0",
+        "pro 4-0",
+        "prolene 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 40
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 18
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10038",
+      "mpn": "MP-564656",
+      "name": "Polypropylene Monofilament Suture 4-0 SH",
+      "nicknames": [
+        "prolene 4-0",
+        "pro 4-0",
+        "prolene 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 145
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10039",
+      "mpn": "MP-197793",
+      "name": "Polypropylene Monofilament Suture 5-0 CT-1",
+      "nicknames": [
+        "prolene 5-0",
+        "pro 5-0",
+        "prolene 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 65
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10040",
+      "mpn": "MP-161483",
+      "name": "Polypropylene Monofilament Suture 5-0 SH",
+      "nicknames": [
+        "prolene 5-0",
+        "pro 5-0",
+        "prolene 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 5
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10041",
+      "mpn": "MP-399105",
+      "name": "Silk Braided Suture 0 CT-1",
+      "nicknames": [
+        "silk 0",
+        "silk 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 192
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10042",
+      "mpn": "MP-262316",
+      "name": "Silk Braided Suture 0 SH",
+      "nicknames": [
+        "silk 0",
+        "silk 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 60
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 35
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10043",
+      "mpn": "MP-163918",
+      "name": "Silk Braided Suture 2-0 CT-1",
+      "nicknames": [
+        "silk 2-0",
+        "silk 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 31
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10044",
+      "mpn": "MP-265080",
+      "name": "Silk Braided Suture 2-0 SH",
+      "nicknames": [
+        "silk 2-0",
+        "silk 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 135
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 12
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10045",
+      "mpn": "MP-808011",
+      "name": "Silk Braided Suture 3-0 CT-1",
+      "nicknames": [
+        "silk 3-0",
+        "silk 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 108
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10046",
+      "mpn": "MP-141672",
+      "name": "Silk Braided Suture 3-0 SH",
+      "nicknames": [
+        "silk 3-0",
+        "silk 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 112
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 17
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10047",
+      "mpn": "MP-314181",
+      "name": "Silk Braided Suture 4-0 CT-1",
+      "nicknames": [
+        "silk 4-0",
+        "silk 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 85
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10048",
+      "mpn": "MP-579434",
+      "name": "Silk Braided Suture 4-0 SH",
+      "nicknames": [
+        "silk 4-0",
+        "silk 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 197
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10049",
+      "mpn": "MP-690341",
+      "name": "Silk Braided Suture 5-0 CT-1",
+      "nicknames": [
+        "silk 5-0",
+        "silk 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 23
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 33
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10050",
+      "mpn": "MP-172132",
+      "name": "Silk Braided Suture 5-0 SH",
+      "nicknames": [
+        "silk 5-0",
+        "silk 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 99
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 29
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10051",
+      "mpn": "MP-837715",
+      "name": "Chromic Gut Suture 0 CT-1",
+      "nicknames": [
+        "chromic 0",
+        "gut 0",
+        "chromic 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 172
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10052",
+      "mpn": "MP-240814",
+      "name": "Chromic Gut Suture 0 SH",
+      "nicknames": [
+        "chromic 0",
+        "gut 0",
+        "chromic 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 19
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10053",
+      "mpn": "MP-734210",
+      "name": "Chromic Gut Suture 2-0 CT-1",
+      "nicknames": [
+        "chromic 2-0",
+        "gut 2-0",
+        "chromic 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 92
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 17
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10054",
+      "mpn": "MP-987204",
+      "name": "Chromic Gut Suture 2-0 SH",
+      "nicknames": [
+        "chromic 2-0",
+        "gut 2-0",
+        "chromic 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 167
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 18
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 22
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10055",
+      "mpn": "MP-908577",
+      "name": "Chromic Gut Suture 3-0 CT-1",
+      "nicknames": [
+        "chromic 3-0",
+        "gut 3-0",
+        "chromic 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 72
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 29
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 28
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10056",
+      "mpn": "MP-688153",
+      "name": "Chromic Gut Suture 3-0 SH",
+      "nicknames": [
+        "chromic 3-0",
+        "gut 3-0",
+        "chromic 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-A",
+          "quantity": 10
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10057",
+      "mpn": "MP-710805",
+      "name": "Chromic Gut Suture 4-0 CT-1",
+      "nicknames": [
+        "chromic 4-0",
+        "gut 4-0",
+        "chromic 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 115
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 20
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10058",
+      "mpn": "MP-475190",
+      "name": "Chromic Gut Suture 4-0 SH",
+      "nicknames": [
+        "chromic 4-0",
+        "gut 4-0",
+        "chromic 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 68
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10059",
+      "mpn": "MP-526117",
+      "name": "Chromic Gut Suture 5-0 CT-1",
+      "nicknames": [
+        "chromic 5-0",
+        "gut 5-0",
+        "chromic 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 196
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10060",
+      "mpn": "MP-938742",
+      "name": "Chromic Gut Suture 5-0 SH",
+      "nicknames": [
+        "chromic 5-0",
+        "gut 5-0",
+        "chromic 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 110
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 22
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10061",
+      "mpn": "MP-531712",
+      "name": "Nylon Monofilament Suture 0 CT-1",
+      "nicknames": [
+        "nylon 0",
+        "ethilon 0",
+        "nylon 0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 193
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10062",
+      "mpn": "MP-501124",
+      "name": "Nylon Monofilament Suture 0 SH",
+      "nicknames": [
+        "nylon 0",
+        "ethilon 0",
+        "nylon 0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 125
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10063",
+      "mpn": "MP-333752",
+      "name": "Nylon Monofilament Suture 2-0 CT-1",
+      "nicknames": [
+        "nylon 2-0",
+        "ethilon 2-0",
+        "nylon 2-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-A",
+          "quantity": 22
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10064",
+      "mpn": "MP-910891",
+      "name": "Nylon Monofilament Suture 2-0 SH",
+      "nicknames": [
+        "nylon 2-0",
+        "ethilon 2-0",
+        "nylon 2-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 169
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10065",
+      "mpn": "MP-220944",
+      "name": "Nylon Monofilament Suture 3-0 CT-1",
+      "nicknames": [
+        "nylon 3-0",
+        "ethilon 3-0",
+        "nylon 3-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 71
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10066",
+      "mpn": "MP-555673",
+      "name": "Nylon Monofilament Suture 3-0 SH",
+      "nicknames": [
+        "nylon 3-0",
+        "ethilon 3-0",
+        "nylon 3-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 85
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 33
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 37
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10067",
+      "mpn": "MP-299312",
+      "name": "Nylon Monofilament Suture 4-0 CT-1",
+      "nicknames": [
+        "nylon 4-0",
+        "ethilon 4-0",
+        "nylon 4-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 186
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10068",
+      "mpn": "MP-664607",
+      "name": "Nylon Monofilament Suture 4-0 SH",
+      "nicknames": [
+        "nylon 4-0",
+        "ethilon 4-0",
+        "nylon 4-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 194
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 28
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10069",
+      "mpn": "MP-173372",
+      "name": "Nylon Monofilament Suture 5-0 CT-1",
+      "nicknames": [
+        "nylon 5-0",
+        "ethilon 5-0",
+        "nylon 5-0 ct-1"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 89
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10070",
+      "mpn": "MP-414910",
+      "name": "Nylon Monofilament Suture 5-0 SH",
+      "nicknames": [
+        "nylon 5-0",
+        "ethilon 5-0",
+        "nylon 5-0 sh"
+      ],
+      "category": "Sutures",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 175
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10071",
+      "mpn": "MP-233470",
+      "name": "Silk Ties 0, 18 in",
+      "nicknames": [
+        "silk ties 0",
+        "free ties"
+      ],
+      "category": "Sutures",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 175
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10072",
+      "mpn": "MP-745414",
+      "name": "Silk Ties 2-0, 18 in",
+      "nicknames": [
+        "silk ties 2-0",
+        "free ties"
+      ],
+      "category": "Sutures",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 108
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 1
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10073",
+      "mpn": "MP-550770",
+      "name": "Silk Ties 3-0, 18 in",
+      "nicknames": [
+        "silk ties 3-0",
+        "free ties"
+      ],
+      "category": "Sutures",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 160
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10074",
+      "mpn": "MP-636004",
+      "name": "Sterile Surgical Gloves, Latex, Size 6",
+      "nicknames": [
+        "gloves 6"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 193
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 6
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 40
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10075",
+      "mpn": "MP-356736",
+      "name": "Sterile Surgical Gloves, Latex, Size 6.5",
+      "nicknames": [
+        "gloves 6.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 161
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 27
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10076",
+      "mpn": "MP-587115",
+      "name": "Sterile Surgical Gloves, Latex, Size 7",
+      "nicknames": [
+        "gloves 7"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 68
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10077",
+      "mpn": "MP-266889",
+      "name": "Sterile Surgical Gloves, Latex, Size 7.5",
+      "nicknames": [
+        "gloves 7.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 126
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 16
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10078",
+      "mpn": "MP-384913",
+      "name": "Sterile Surgical Gloves, Latex, Size 8",
+      "nicknames": [
+        "gloves 8"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 143
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 10
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10079",
+      "mpn": "MP-535970",
+      "name": "Sterile Surgical Gloves, Latex, Size 8.5",
+      "nicknames": [
+        "gloves 8.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 112
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 38
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10080",
+      "mpn": "MP-468845",
+      "name": "Sterile Surgical Gloves, Latex-Free, Size 6",
+      "nicknames": [
+        "latex free gloves 6",
+        "non-latex gloves 6"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 104
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10081",
+      "mpn": "MP-507746",
+      "name": "Sterile Surgical Gloves, Latex-Free, Size 6.5",
+      "nicknames": [
+        "latex free gloves 6.5",
+        "non-latex gloves 6.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 178
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10082",
+      "mpn": "MP-242291",
+      "name": "Sterile Surgical Gloves, Latex-Free, Size 7",
+      "nicknames": [
+        "latex free gloves 7",
+        "non-latex gloves 7"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 51
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 25
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10083",
+      "mpn": "MP-885408",
+      "name": "Sterile Surgical Gloves, Latex-Free, Size 7.5",
+      "nicknames": [
+        "latex free gloves 7.5",
+        "non-latex gloves 7.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 94
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10084",
+      "mpn": "MP-751517",
+      "name": "Sterile Surgical Gloves, Latex-Free, Size 8",
+      "nicknames": [
+        "latex free gloves 8",
+        "non-latex gloves 8"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 8
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 14
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10085",
+      "mpn": "MP-427110",
+      "name": "Sterile Surgical Gloves, Latex-Free, Size 8.5",
+      "nicknames": [
+        "latex free gloves 8.5",
+        "non-latex gloves 8.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 101
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 13
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 16
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10086",
+      "mpn": "MP-934904",
+      "name": "Sterile Underglove, Latex-Free, Size 6",
+      "nicknames": [
+        "underglove 6",
+        "indicator gloves 6"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 15
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 28
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10087",
+      "mpn": "MP-869440",
+      "name": "Sterile Underglove, Latex-Free, Size 6.5",
+      "nicknames": [
+        "underglove 6.5",
+        "indicator gloves 6.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 171
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10088",
+      "mpn": "MP-697530",
+      "name": "Sterile Underglove, Latex-Free, Size 7",
+      "nicknames": [
+        "underglove 7",
+        "indicator gloves 7"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 102
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10089",
+      "mpn": "MP-725113",
+      "name": "Sterile Underglove, Latex-Free, Size 7.5",
+      "nicknames": [
+        "underglove 7.5",
+        "indicator gloves 7.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 75
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10090",
+      "mpn": "MP-894993",
+      "name": "Sterile Underglove, Latex-Free, Size 8",
+      "nicknames": [
+        "underglove 8",
+        "indicator gloves 8"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 126
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10091",
+      "mpn": "MP-421080",
+      "name": "Sterile Underglove, Latex-Free, Size 8.5",
+      "nicknames": [
+        "underglove 8.5",
+        "indicator gloves 8.5"
+      ],
+      "category": "Gloves",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 99
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10092",
+      "mpn": "MP-430876",
+      "name": "Surgical Gown, Standard, L",
+      "nicknames": [
+        "gown l"
+      ],
+      "category": "Gowns",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 142
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 13
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10093",
+      "mpn": "MP-396745",
+      "name": "Surgical Gown, Standard, XL",
+      "nicknames": [
+        "gown xl"
+      ],
+      "category": "Gowns",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 54
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10094",
+      "mpn": "MP-592198",
+      "name": "Surgical Gown, Standard, XXL",
+      "nicknames": [
+        "gown xxl"
+      ],
+      "category": "Gowns",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 92
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 4
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 31
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10095",
+      "mpn": "MP-705050",
+      "name": "Surgical Gown, Reinforced, L",
+      "nicknames": [
+        "reinforced gown l",
+        "impervious gown l"
+      ],
+      "category": "Gowns",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 18
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 37
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10096",
+      "mpn": "MP-735770",
+      "name": "Surgical Gown, Reinforced, XL",
+      "nicknames": [
+        "reinforced gown xl",
+        "impervious gown xl"
+      ],
+      "category": "Gowns",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 163
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 29
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10097",
+      "mpn": "MP-377501",
+      "name": "Surgical Gown, Reinforced, XXL",
+      "nicknames": [
+        "reinforced gown xxl",
+        "impervious gown xxl"
+      ],
+      "category": "Gowns",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 45
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10098",
+      "mpn": "MP-820775",
+      "name": "Laparotomy Sponge 18 x 18 in",
+      "nicknames": [
+        "laps",
+        "lap pads",
+        "lap sponges"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 72
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 13
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10099",
+      "mpn": "MP-723948",
+      "name": "Laparotomy Sponge 12 x 12 in",
+      "nicknames": [
+        "small laps"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 150
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10100",
+      "mpn": "MP-727086",
+      "name": "X-Ray Detectable Gauze Sponge 4 x 4 in",
+      "nicknames": [
+        "raytec",
+        "4x4s",
+        "ray tecs"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-A",
+          "quantity": 21
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10101",
+      "mpn": "MP-121753",
+      "name": "Kittner Dissector Sponge",
+      "nicknames": [
+        "peanuts",
+        "kittners",
+        "peanut sponges"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 177
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10102",
+      "mpn": "MP-593355",
+      "name": "Tonsil Sponge",
+      "nicknames": [
+        "tonsil balls"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 118
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 38
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10103",
+      "mpn": "MP-557058",
+      "name": "Cottonoid Neuro Patty 1/2 x 1/2 in",
+      "nicknames": [
+        "patties",
+        "cottonoids",
+        "patties 1/2 x 1/2 in"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 130
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 27
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10104",
+      "mpn": "MP-449499",
+      "name": "Cottonoid Neuro Patty 1/2 x 3 in",
+      "nicknames": [
+        "patties",
+        "cottonoids",
+        "patties 1/2 x 3 in"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 31
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10105",
+      "mpn": "MP-402218",
+      "name": "Cottonoid Neuro Patty 1 x 1 in",
+      "nicknames": [
+        "patties",
+        "cottonoids",
+        "patties 1 x 1 in"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 107
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10106",
+      "mpn": "MP-192337",
+      "name": "Cottonoid Neuro Patty 1 x 3 in",
+      "nicknames": [
+        "patties",
+        "cottonoids",
+        "patties 1 x 3 in"
+      ],
+      "category": "Sponges",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 87
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10107",
+      "mpn": "MP-964998",
+      "name": "Electrosurgical Pencil, Rocker Switch",
+      "nicknames": [
+        "bovie",
+        "cautery pencil",
+        "bovie pencil"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 173
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10108",
+      "mpn": "MP-313446",
+      "name": "Electrosurgical Pencil, Extended Blade",
+      "nicknames": [
+        "long bovie",
+        "extended bovie"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 38
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10109",
+      "mpn": "MP-227324",
+      "name": "Electrosurgical Pencil with Smoke Evacuation",
+      "nicknames": [
+        "smoke evac pencil",
+        "smoke bovie"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-A",
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10110",
+      "mpn": "MP-425845",
+      "name": "Patient Return Electrode, Adult",
+      "nicknames": [
+        "grounding pad",
+        "bovie pad",
+        "return pad"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 146
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 15
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10111",
+      "mpn": "MP-851413",
+      "name": "Patient Return Electrode, Pediatric",
+      "nicknames": [
+        "peds grounding pad"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 185
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10112",
+      "mpn": "MP-355570",
+      "name": "Electrode Tip Cleaner",
+      "nicknames": [
+        "scratch pad",
+        "tip cleaner"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 42
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 39
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10113",
+      "mpn": "MP-380150",
+      "name": "Electrosurgical Needle Tip Electrode",
+      "nicknames": [
+        "needle tip bovie",
+        "colorado tip"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 77
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10114",
+      "mpn": "MP-708093",
+      "name": "Bipolar Forceps Cord",
+      "nicknames": [
+        "bipolar cord"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 130
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10115",
+      "mpn": "MP-461888",
+      "name": "Bipolar Forceps, Disposable, Bayonet",
+      "nicknames": [
+        "bipolar",
+        "bipolar forceps"
+      ],
+      "category": "Electrosurgery",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 200
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10116",
+      "mpn": "MP-297816",
+      "name": "Ultrasonic Shears, 36 cm",
+      "nicknames": [
+        "harmonic",
+        "harmonic scalpel"
+      ],
+      "category": "Energy Devices",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 66
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10117",
+      "mpn": "MP-530728",
+      "name": "Ultrasonic Shears, 23 cm",
+      "nicknames": [
+        "short harmonic"
+      ],
+      "category": "Energy Devices",
+      "unit": "each",
+      "image": null,
+      "stock": []
+    },
+    {
+      "item_number": "SIF-10118",
+      "mpn": "MP-950823",
+      "name": "Vessel Sealing Device, 37 cm",
+      "nicknames": [
+        "ligasure"
+      ],
+      "category": "Energy Devices",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 174
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10119",
+      "mpn": "MP-619389",
+      "name": "Vessel Sealing Device, Open Jaw",
+      "nicknames": [
+        "ligasure impact",
+        "open ligasure"
+      ],
+      "category": "Energy Devices",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 38
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10120",
+      "mpn": "MP-986088",
+      "name": "Kocher Clamp, Straight",
+      "nicknames": [
+        "kocher",
+        "kochers"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 139
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10121",
+      "mpn": "MP-529893",
+      "name": "Kelly Hemostat, Curved",
+      "nicknames": [
+        "kelly",
+        "kellys"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 44
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10122",
+      "mpn": "MP-781403",
+      "name": "Crile Hemostat, Curved",
+      "nicknames": [
+        "crile"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 89
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10123",
+      "mpn": "MP-498468",
+      "name": "Mosquito Hemostat, Curved",
+      "nicknames": [
+        "mosquito",
+        "snap"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 165
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10124",
+      "mpn": "MP-667296",
+      "name": "Allis Tissue Forceps",
+      "nicknames": [
+        "allis"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-A",
+          "quantity": 19
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10125",
+      "mpn": "MP-883041",
+      "name": "Babcock Tissue Forceps",
+      "nicknames": [
+        "babcock"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10126",
+      "mpn": "MP-205389",
+      "name": "Right Angle Clamp",
+      "nicknames": [
+        "right angle",
+        "mixter"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 182
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 2
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10127",
+      "mpn": "MP-407618",
+      "name": "Tonsil Clamp",
+      "nicknames": [
+        "tonsil",
+        "schnidt"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 115
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10128",
+      "mpn": "MP-278240",
+      "name": "Mayo Scissors, Curved",
+      "nicknames": [
+        "mayos",
+        "curved mayo"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 161
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10129",
+      "mpn": "MP-621841",
+      "name": "Metzenbaum Scissors",
+      "nicknames": [
+        "metz",
+        "metzenbaums"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 41
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10130",
+      "mpn": "MP-943718",
+      "name": "Suture Scissors",
+      "nicknames": [
+        "suture scissors"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 78
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 11
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10131",
+      "mpn": "MP-716113",
+      "name": "DeBakey Tissue Forceps",
+      "nicknames": [
+        "debakey",
+        "debakeys"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 113
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10132",
+      "mpn": "MP-308894",
+      "name": "Adson Tissue Forceps with Teeth",
+      "nicknames": [
+        "adson",
+        "pickups",
+        "adson with teeth"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 128
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 25
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 37
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10133",
+      "mpn": "MP-410244",
+      "name": "Russian Tissue Forceps",
+      "nicknames": [
+        "russians"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 80
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 37
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10134",
+      "mpn": "MP-819112",
+      "name": "Needle Holder, Mayo-Hegar",
+      "nicknames": [
+        "needle driver",
+        "needle holder"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 17
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10135",
+      "mpn": "MP-973294",
+      "name": "Army-Navy Retractor",
+      "nicknames": [
+        "army navy",
+        "army navys"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 78
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10136",
+      "mpn": "MP-329642",
+      "name": "Richardson Retractor",
+      "nicknames": [
+        "rich",
+        "richardson"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 163
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 9
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10137",
+      "mpn": "MP-423939",
+      "name": "Deaver Retractor",
+      "nicknames": [
+        "deaver"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 13
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 9
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 19
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10138",
+      "mpn": "MP-442589",
+      "name": "Weitlaner Self-Retaining Retractor",
+      "nicknames": [
+        "weitlaner"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 49
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10139",
+      "mpn": "MP-483629",
+      "name": "Gelpi Self-Retaining Retractor",
+      "nicknames": [
+        "gelpi"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 74
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10140",
+      "mpn": "MP-945664",
+      "name": "Senn Retractor",
+      "nicknames": [
+        "senn",
+        "cat paw"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 91
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10141",
+      "mpn": "MP-247594",
+      "name": "Malleable Retractor",
+      "nicknames": [
+        "malleable",
+        "ribbon"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 62
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10142",
+      "mpn": "MP-516716",
+      "name": "Sponge Stick",
+      "nicknames": [
+        "sponge stick",
+        "ring forceps"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 147
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 35
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10143",
+      "mpn": "MP-229592",
+      "name": "Towel Clip, Backhaus",
+      "nicknames": [
+        "towel clip"
+      ],
+      "category": "Instruments",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 177
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 25
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10144",
+      "mpn": "MP-962367",
+      "name": "Basic Laparotomy Instrument Set",
+      "nicknames": [
+        "lap set",
+        "major set"
+      ],
+      "category": "Instrument Sets",
+      "unit": "set",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 100
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 15
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10145",
+      "mpn": "MP-688678",
+      "name": "Minor Instrument Set",
+      "nicknames": [
+        "minor set"
+      ],
+      "category": "Instrument Sets",
+      "unit": "set",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 161
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 5
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10146",
+      "mpn": "MP-835132",
+      "name": "Laparoscopic Instrument Set",
+      "nicknames": [
+        "lap chole set",
+        "lappy set"
+      ],
+      "category": "Instrument Sets",
+      "unit": "set",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 109
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10147",
+      "mpn": "MP-419149",
+      "name": "Vascular Instrument Set",
+      "nicknames": [
+        "vascular set"
+      ],
+      "category": "Instrument Sets",
+      "unit": "set",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10148",
+      "mpn": "MP-489033",
+      "name": "Balfour Retractor Set",
+      "nicknames": [
+        "balfour"
+      ],
+      "category": "Instrument Sets",
+      "unit": "set",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 195
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10149",
+      "mpn": "MP-535037",
+      "name": "Bookwalter Retractor Set",
+      "nicknames": [
+        "bookwalter",
+        "book"
+      ],
+      "category": "Instrument Sets",
+      "unit": "set",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 130
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 18
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10150",
+      "mpn": "MP-327823",
+      "name": "Surgical Blade #10, Sterile",
+      "nicknames": [
+        "10 blade",
+        "#10"
+      ],
+      "category": "Blades",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 65
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 24
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10151",
+      "mpn": "MP-153035",
+      "name": "Surgical Blade #11, Sterile",
+      "nicknames": [
+        "11 blade",
+        "#11"
+      ],
+      "category": "Blades",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 67
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10152",
+      "mpn": "MP-444519",
+      "name": "Surgical Blade #15, Sterile",
+      "nicknames": [
+        "15 blade",
+        "#15"
+      ],
+      "category": "Blades",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 157
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10153",
+      "mpn": "MP-378258",
+      "name": "Surgical Blade #20, Sterile",
+      "nicknames": [
+        "20 blade",
+        "#20"
+      ],
+      "category": "Blades",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 194
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10154",
+      "mpn": "MP-416282",
+      "name": "Scalpel Handle #3",
+      "nicknames": [
+        "knife handle",
+        "3 handle"
+      ],
+      "category": "Blades",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 12
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10155",
+      "mpn": "MP-546980",
+      "name": "Safety Scalpel #10, Disposable",
+      "nicknames": [
+        "disposable knife",
+        "safety scalpel"
+      ],
+      "category": "Blades",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 130
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10156",
+      "mpn": "MP-437758",
+      "name": "Skin Stapler, 35 Wide",
+      "nicknames": [
+        "skin stapler",
+        "stapler"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 21
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 40
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10157",
+      "mpn": "MP-203996",
+      "name": "Skin Staple Remover",
+      "nicknames": [
+        "staple remover"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10158",
+      "mpn": "MP-855855",
+      "name": "Endoscopic Linear Stapler 30 mm",
+      "nicknames": [
+        "endo gia 30",
+        "endo stapler"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 115
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 15
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10159",
+      "mpn": "MP-518098",
+      "name": "Endoscopic Stapler Reload 30 mm, Tan (vascular)",
+      "nicknames": [
+        "tan load 30",
+        "30 tan reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 29
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 21
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10160",
+      "mpn": "MP-260053",
+      "name": "Endoscopic Stapler Reload 30 mm, Purple (medium)",
+      "nicknames": [
+        "purple load 30",
+        "30 purple reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 126
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 6
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10161",
+      "mpn": "MP-880758",
+      "name": "Endoscopic Stapler Reload 30 mm, Black (thick)",
+      "nicknames": [
+        "black load 30",
+        "30 black reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 38
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 38
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10162",
+      "mpn": "MP-688967",
+      "name": "Endoscopic Linear Stapler 45 mm",
+      "nicknames": [
+        "endo gia 45",
+        "endo stapler"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 36
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 28
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10163",
+      "mpn": "MP-856086",
+      "name": "Endoscopic Stapler Reload 45 mm, Tan (vascular)",
+      "nicknames": [
+        "tan load 45",
+        "45 tan reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 78
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 33
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10164",
+      "mpn": "MP-323072",
+      "name": "Endoscopic Stapler Reload 45 mm, Purple (medium)",
+      "nicknames": [
+        "purple load 45",
+        "45 purple reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 128
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 7
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10165",
+      "mpn": "MP-485415",
+      "name": "Endoscopic Stapler Reload 45 mm, Black (thick)",
+      "nicknames": [
+        "black load 45",
+        "45 black reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 76
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 28
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10166",
+      "mpn": "MP-904711",
+      "name": "Endoscopic Linear Stapler 60 mm",
+      "nicknames": [
+        "endo gia 60",
+        "endo stapler"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 162
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10167",
+      "mpn": "MP-130359",
+      "name": "Endoscopic Stapler Reload 60 mm, Tan (vascular)",
+      "nicknames": [
+        "tan load 60",
+        "60 tan reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 184
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10168",
+      "mpn": "MP-468074",
+      "name": "Endoscopic Stapler Reload 60 mm, Purple (medium)",
+      "nicknames": [
+        "purple load 60",
+        "60 purple reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10169",
+      "mpn": "MP-172965",
+      "name": "Endoscopic Stapler Reload 60 mm, Black (thick)",
+      "nicknames": [
+        "black load 60",
+        "60 black reload",
+        "reload"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 167
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10170",
+      "mpn": "MP-325583",
+      "name": "Ligating Clips, Small",
+      "nicknames": [
+        "ligaclips",
+        "clips",
+        "small clips"
+      ],
+      "category": "Clips",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 121
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 21
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10171",
+      "mpn": "MP-914571",
+      "name": "Ligating Clips, Medium",
+      "nicknames": [
+        "ligaclips",
+        "clips",
+        "medium clips"
+      ],
+      "category": "Clips",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 157
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 4
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10172",
+      "mpn": "MP-152179",
+      "name": "Ligating Clips, Medium-Large",
+      "nicknames": [
+        "ligaclips",
+        "clips",
+        "medium-large clips"
+      ],
+      "category": "Clips",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 74
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 28
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 29
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10173",
+      "mpn": "MP-534303",
+      "name": "Ligating Clips, Large",
+      "nicknames": [
+        "ligaclips",
+        "clips",
+        "large clips"
+      ],
+      "category": "Clips",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 198
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 19
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10174",
+      "mpn": "MP-811163",
+      "name": "Clip Applier, Medium, Disposable",
+      "nicknames": [
+        "clip applier"
+      ],
+      "category": "Clips",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 129
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 20
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10175",
+      "mpn": "MP-728437",
+      "name": "Endoscopic Clip Applier, 10 mm",
+      "nicknames": [
+        "endo clip",
+        "lap clip applier"
+      ],
+      "category": "Clips",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 57
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10176",
+      "mpn": "MP-901280",
+      "name": "Circular Stapler, 28 mm",
+      "nicknames": [
+        "eea 28",
+        "circular stapler"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 88
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10177",
+      "mpn": "MP-284229",
+      "name": "Circular Stapler, 31 mm",
+      "nicknames": [
+        "eea 31"
+      ],
+      "category": "Staplers",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 141
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10178",
+      "mpn": "MP-175576",
+      "name": "Closed Wound Drain, Flat, 7 Fr",
+      "nicknames": [
+        "jp",
+        "jackson pratt",
+        "jp 7"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 194
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 2
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10179",
+      "mpn": "MP-428267",
+      "name": "Closed Wound Drain, Flat, 10 Fr",
+      "nicknames": [
+        "jp",
+        "jackson pratt",
+        "jp 10"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 151
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 27
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10180",
+      "mpn": "MP-121869",
+      "name": "Closed Wound Drain, Flat, 15 Fr",
+      "nicknames": [
+        "jp",
+        "jackson pratt",
+        "jp 15"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 48
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10181",
+      "mpn": "MP-192410",
+      "name": "Silicone Channel Drain 15 Fr",
+      "nicknames": [
+        "blake",
+        "blake 15"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 38
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10182",
+      "mpn": "MP-514991",
+      "name": "Silicone Channel Drain 19 Fr",
+      "nicknames": [
+        "blake",
+        "blake 19"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 195
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 22
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10183",
+      "mpn": "MP-180089",
+      "name": "Bulb Reservoir, 100 mL",
+      "nicknames": [
+        "jp bulb",
+        "grenade"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10184",
+      "mpn": "MP-466346",
+      "name": "Penrose Drain 1/4 in",
+      "nicknames": [
+        "penrose",
+        "penrose 1/4 in"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 170
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10185",
+      "mpn": "MP-368402",
+      "name": "Penrose Drain 1/2 in",
+      "nicknames": [
+        "penrose",
+        "penrose 1/2 in"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 159
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 5
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10186",
+      "mpn": "MP-586490",
+      "name": "Penrose Drain 1 in",
+      "nicknames": [
+        "penrose",
+        "penrose 1 in"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 199
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10187",
+      "mpn": "MP-438908",
+      "name": "Closed Wound Suction Evacuator",
+      "nicknames": [
+        "hemovac"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 165
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 29
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 29
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10188",
+      "mpn": "MP-762055",
+      "name": "Chest Tube 28 Fr",
+      "nicknames": [
+        "chest tube 28"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 75
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10189",
+      "mpn": "MP-584172",
+      "name": "Chest Tube 32 Fr",
+      "nicknames": [
+        "chest tube 32"
+      ],
+      "category": "Drains",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10190",
+      "mpn": "MP-744883",
+      "name": "Foley Catheter 14 Fr, 5 mL Balloon",
+      "nicknames": [
+        "foley",
+        "foley 14"
+      ],
+      "category": "Catheters",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 103
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10191",
+      "mpn": "MP-874814",
+      "name": "Foley Catheter 16 Fr, 5 mL Balloon",
+      "nicknames": [
+        "foley",
+        "foley 16"
+      ],
+      "category": "Catheters",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 120
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10192",
+      "mpn": "MP-437145",
+      "name": "Foley Catheter 18 Fr, 5 mL Balloon",
+      "nicknames": [
+        "foley",
+        "foley 18"
+      ],
+      "category": "Catheters",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 133
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 4
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 22
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10193",
+      "mpn": "MP-849014",
+      "name": "Foley Insertion Tray with Urine Meter",
+      "nicknames": [
+        "foley kit",
+        "foley tray"
+      ],
+      "category": "Catheters",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 170
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 16
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10194",
+      "mpn": "MP-811875",
+      "name": "Red Rubber Catheter 14 Fr",
+      "nicknames": [
+        "red rubber",
+        "straight cath"
+      ],
+      "category": "Catheters",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 166
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 5
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10195",
+      "mpn": "MP-811332",
+      "name": "Coude Catheter 16 Fr",
+      "nicknames": [
+        "coude"
+      ],
+      "category": "Catheters",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 69
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10196",
+      "mpn": "MP-257677",
+      "name": "Suction Connecting Tubing, 12 ft",
+      "nicknames": [
+        "suction tubing"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 154
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10197",
+      "mpn": "MP-952686",
+      "name": "Yankauer Suction Tip",
+      "nicknames": [
+        "yankauer",
+        "tonsil suction"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 184
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10198",
+      "mpn": "MP-301332",
+      "name": "Frazier Suction Tip 8 Fr",
+      "nicknames": [
+        "frazier",
+        "frazier 8"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 40
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 19
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10199",
+      "mpn": "MP-206053",
+      "name": "Frazier Suction Tip 10 Fr",
+      "nicknames": [
+        "frazier",
+        "frazier 10"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 143
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10200",
+      "mpn": "MP-139581",
+      "name": "Frazier Suction Tip 12 Fr",
+      "nicknames": [
+        "frazier",
+        "frazier 12"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 163
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 25
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10201",
+      "mpn": "MP-971728",
+      "name": "Poole Abdominal Suction Tip",
+      "nicknames": [
+        "poole"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 164
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 29
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10202",
+      "mpn": "MP-145814",
+      "name": "Suction Canister, 3000 mL",
+      "nicknames": [
+        "canister",
+        "suction canister"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 178
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10203",
+      "mpn": "MP-906814",
+      "name": "Suction Irrigator, Laparoscopic",
+      "nicknames": [
+        "suction irrigator",
+        "lap suction"
+      ],
+      "category": "Suction",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 102
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 27
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10204",
+      "mpn": "MP-956572",
+      "name": "Transparent Film Dressing 2 3/8 x 2 3/4 in",
+      "nicknames": [
+        "tegaderm",
+        "tegaderm 2 3/8 x 2 3/4 in"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 159
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10205",
+      "mpn": "MP-489244",
+      "name": "Transparent Film Dressing 4 x 4 3/4 in",
+      "nicknames": [
+        "tegaderm",
+        "tegaderm 4 x 4 3/4 in"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 31
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10206",
+      "mpn": "MP-398910",
+      "name": "Transparent Film Dressing 6 x 8 in",
+      "nicknames": [
+        "tegaderm",
+        "tegaderm 6 x 8 in"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 46
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 33
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 28
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10207",
+      "mpn": "MP-196168",
+      "name": "Non-Adherent Pad 3 x 4 in",
+      "nicknames": [
+        "telfa",
+        "telfa 3 x 4 in"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 61
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10208",
+      "mpn": "MP-127965",
+      "name": "Non-Adherent Pad 3 x 8 in",
+      "nicknames": [
+        "telfa",
+        "telfa 3 x 8 in"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 106
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 16
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10209",
+      "mpn": "MP-493124",
+      "name": "Petrolatum Gauze 1 x 8 in",
+      "nicknames": [
+        "xeroform"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 86
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10210",
+      "mpn": "MP-781533",
+      "name": "Petrolatum Gauze 5 x 9 in",
+      "nicknames": [
+        "big xeroform"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 42
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 19
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10211",
+      "mpn": "MP-595404",
+      "name": "Adhesive Skin Closure Strips 1/4 x 4 in",
+      "nicknames": [
+        "steri strips",
+        "steris"
+      ],
+      "category": "Skin Closure",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 40
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10212",
+      "mpn": "MP-105506",
+      "name": "Adhesive Skin Closure Strips 1/2 x 4 in",
+      "nicknames": [
+        "steri strips",
+        "steris"
+      ],
+      "category": "Skin Closure",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 9
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 10
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10213",
+      "mpn": "MP-653408",
+      "name": "Topical Skin Adhesive, 0.7 mL",
+      "nicknames": [
+        "dermabond",
+        "skin glue",
+        "glue"
+      ],
+      "category": "Skin Closure",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 78
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 8
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 27
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10214",
+      "mpn": "MP-101640",
+      "name": "Liquid Adhesive Benzoin Swab",
+      "nicknames": [
+        "benzoin",
+        "mastisol"
+      ],
+      "category": "Skin Closure",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 66
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 12
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10215",
+      "mpn": "MP-648913",
+      "name": "Abdominal Pad 8 x 10 in",
+      "nicknames": [
+        "abd",
+        "abd pad"
+      ],
+      "category": "Dressings",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 22
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 33
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10216",
+      "mpn": "MP-868544",
+      "name": "Gauze Roll 4.5 in",
+      "nicknames": [
+        "kerlix",
+        "fluffs"
+      ],
+      "category": "Dressings",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10217",
+      "mpn": "MP-448671",
+      "name": "Self-Adherent Wrap 4 in",
+      "nicknames": [
+        "coban"
+      ],
+      "category": "Dressings",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 95
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10218",
+      "mpn": "MP-817941",
+      "name": "Antimicrobial Incise Drape 23 x 17 in",
+      "nicknames": [
+        "ioban"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 183
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10219",
+      "mpn": "MP-166165",
+      "name": "Island Dressing 4 x 8 in",
+      "nicknames": [
+        "island dressing",
+        "primapore"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 122
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 13
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10220",
+      "mpn": "MP-143941",
+      "name": "Foam Silicone Border Dressing 6 x 6 in",
+      "nicknames": [
+        "mepilex",
+        "foam dressing"
+      ],
+      "category": "Dressings",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 84
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10221",
+      "mpn": "MP-889882",
+      "name": "Laparotomy Drape, Transverse",
+      "nicknames": [
+        "lap drape"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 78
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10222",
+      "mpn": "MP-448048",
+      "name": "Universal Drape Pack",
+      "nicknames": [
+        "universal pack",
+        "u drape"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 99
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10223",
+      "mpn": "MP-505426",
+      "name": "Split Sheet Drape",
+      "nicknames": [
+        "split sheet",
+        "u drape"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 52
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10224",
+      "mpn": "MP-379676",
+      "name": "Extremity Drape",
+      "nicknames": [
+        "extremity drape"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 191
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 28
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10225",
+      "mpn": "MP-671971",
+      "name": "Three-Quarter Sheet",
+      "nicknames": [
+        "3/4 sheet",
+        "three quarter sheet"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 31
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10226",
+      "mpn": "MP-852524",
+      "name": "Half Sheet",
+      "nicknames": [
+        "half sheet"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 181
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 29
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10227",
+      "mpn": "MP-744718",
+      "name": "Mayo Stand Cover",
+      "nicknames": [
+        "mayo cover",
+        "mayo stand cover"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 75
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 4
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10228",
+      "mpn": "MP-232361",
+      "name": "Back Table Cover, 60 x 90 in",
+      "nicknames": [
+        "back table cover"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 170
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 25
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10229",
+      "mpn": "MP-133958",
+      "name": "C-Arm Drape",
+      "nicknames": [
+        "c arm drape",
+        "c-arm cover"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 178
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10230",
+      "mpn": "MP-701800",
+      "name": "Camera Drape",
+      "nicknames": [
+        "camera bag",
+        "camera cover"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 98
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 18
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10231",
+      "mpn": "MP-127172",
+      "name": "Light Handle Cover",
+      "nicknames": [
+        "light handles"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 132
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 17
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10232",
+      "mpn": "MP-848022",
+      "name": "Sterile Towels, Blue, 4 Pack",
+      "nicknames": [
+        "blue towels",
+        "towels"
+      ],
+      "category": "Drapes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 27
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10233",
+      "mpn": "MP-846385",
+      "name": "Oxidized Regenerated Cellulose 2 x 3 in",
+      "nicknames": [
+        "surgicel",
+        "surgicel small"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 184
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10234",
+      "mpn": "MP-310743",
+      "name": "Oxidized Regenerated Cellulose 4 x 8 in",
+      "nicknames": [
+        "surgicel",
+        "big surgicel"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 65
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10235",
+      "mpn": "MP-700076",
+      "name": "Absorbable Gelatin Sponge, Size 100",
+      "nicknames": [
+        "gelfoam"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 146
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 6
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10236",
+      "mpn": "MP-851759",
+      "name": "Hemostatic Matrix, 5 mL",
+      "nicknames": [
+        "floseal"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 139
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 27
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10237",
+      "mpn": "MP-177333",
+      "name": "Bone Wax, 2.5 g",
+      "nicknames": [
+        "bone wax"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 86
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 29
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10238",
+      "mpn": "MP-461249",
+      "name": "Topical Thrombin, 5000 units",
+      "nicknames": [
+        "thrombin"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 146
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10239",
+      "mpn": "MP-235300",
+      "name": "Fibrin Sealant, 4 mL",
+      "nicknames": [
+        "tisseel",
+        "fibrin glue"
+      ],
+      "category": "Hemostatics",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10240",
+      "mpn": "MP-272655",
+      "name": "Bladeless Trocar 5 mm, 100 mm",
+      "nicknames": [
+        "trocar",
+        "port",
+        "5 port",
+        "5 trocar"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 186
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10241",
+      "mpn": "MP-987025",
+      "name": "Bladeless Trocar 11 mm, 100 mm",
+      "nicknames": [
+        "trocar",
+        "port",
+        "11 port",
+        "11 trocar"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 55
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10242",
+      "mpn": "MP-744274",
+      "name": "Bladeless Trocar 12 mm, 100 mm",
+      "nicknames": [
+        "trocar",
+        "port",
+        "12 port",
+        "12 trocar"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 133
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 38
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10243",
+      "mpn": "MP-261684",
+      "name": "Hasson Trocar 12 mm",
+      "nicknames": [
+        "hasson"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 164
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 37
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10244",
+      "mpn": "MP-143195",
+      "name": "Insufflation Needle 120 mm",
+      "nicknames": [
+        "veress",
+        "veress needle"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 12
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10245",
+      "mpn": "MP-904214",
+      "name": "Insufflation Tubing with Filter",
+      "nicknames": [
+        "insufflation tubing",
+        "co2 tubing"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 163
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10246",
+      "mpn": "MP-672079",
+      "name": "Specimen Retrieval Bag, 10 mm",
+      "nicknames": [
+        "endo catch",
+        "bag",
+        "specimen bag"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 82
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 26
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10247",
+      "mpn": "MP-822063",
+      "name": "Specimen Retrieval Bag, 15 mm",
+      "nicknames": [
+        "big endo catch",
+        "large bag"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 117
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 30
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 39
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10248",
+      "mpn": "MP-250647",
+      "name": "Scope Anti-Fog Solution",
+      "nicknames": [
+        "fred",
+        "defogger",
+        "anti fog"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 188
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 23
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10249",
+      "mpn": "MP-589131",
+      "name": "Scope Warmer",
+      "nicknames": [
+        "scope warmer"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 120
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 7
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 25
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10250",
+      "mpn": "MP-745270",
+      "name": "Fascial Closure Device",
+      "nicknames": [
+        "carter thomason",
+        "port closure"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 45
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10251",
+      "mpn": "MP-856157",
+      "name": "Laparoscopic Maryland Dissector, 5 mm",
+      "nicknames": [
+        "maryland"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 200
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 33
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10252",
+      "mpn": "MP-621530",
+      "name": "Laparoscopic Grasper, Atraumatic, 5 mm",
+      "nicknames": [
+        "grasper",
+        "lap grasper"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "CORE-B",
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10253",
+      "mpn": "MP-325595",
+      "name": "Laparoscopic Scissors, Curved, 5 mm",
+      "nicknames": [
+        "lap scissors",
+        "endo shears"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 31
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10254",
+      "mpn": "MP-399628",
+      "name": "Laparoscopic L-Hook Electrode",
+      "nicknames": [
+        "hook",
+        "l hook"
+      ],
+      "category": "Laparoscopy",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10255",
+      "mpn": "MP-900961",
+      "name": "Luer-Lock Syringe 3 mL",
+      "nicknames": [
+        "3 cc syringe",
+        "3 ml syringe"
+      ],
+      "category": "Syringes",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 16
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 37
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 24
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10256",
+      "mpn": "MP-201377",
+      "name": "Luer-Lock Syringe 5 mL",
+      "nicknames": [
+        "5 cc syringe",
+        "5 ml syringe"
+      ],
+      "category": "Syringes",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 91
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 24
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10257",
+      "mpn": "MP-140804",
+      "name": "Luer-Lock Syringe 10 mL",
+      "nicknames": [
+        "10 cc syringe",
+        "10 ml syringe"
+      ],
+      "category": "Syringes",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 90
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10258",
+      "mpn": "MP-658198",
+      "name": "Luer-Lock Syringe 20 mL",
+      "nicknames": [
+        "20 cc syringe",
+        "20 ml syringe"
+      ],
+      "category": "Syringes",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 149
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 2
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 10
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10259",
+      "mpn": "MP-603787",
+      "name": "Luer-Lock Syringe 30 mL",
+      "nicknames": [
+        "30 cc syringe",
+        "30 ml syringe"
+      ],
+      "category": "Syringes",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 166
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10260",
+      "mpn": "MP-258787",
+      "name": "Catheter-Tip Syringe 60 mL",
+      "nicknames": [
+        "toomey",
+        "60 cc catheter tip"
+      ],
+      "category": "Syringes",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 57
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 40
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10261",
+      "mpn": "MP-989587",
+      "name": "Bulb Irrigation Syringe 60 mL",
+      "nicknames": [
+        "asepto",
+        "bulb syringe"
+      ],
+      "category": "Syringes",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 20
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10262",
+      "mpn": "MP-458955",
+      "name": "Hypodermic Needle 18 G x 1.5 in",
+      "nicknames": [
+        "18 gauge",
+        "18g needle"
+      ],
+      "category": "Needles",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 178
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10263",
+      "mpn": "MP-774558",
+      "name": "Hypodermic Needle 22 G x 1.5 in",
+      "nicknames": [
+        "22 gauge",
+        "22g needle"
+      ],
+      "category": "Needles",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 72
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10264",
+      "mpn": "MP-392559",
+      "name": "Hypodermic Needle 25 G x 1.5 in",
+      "nicknames": [
+        "25 gauge",
+        "25g needle"
+      ],
+      "category": "Needles",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 62
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10265",
+      "mpn": "MP-908634",
+      "name": "Hypodermic Needle 27 G x 1.5 in",
+      "nicknames": [
+        "27 gauge",
+        "27g needle"
+      ],
+      "category": "Needles",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 58
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10266",
+      "mpn": "MP-687713",
+      "name": "Spinal Needle 22 G x 3.5 in",
+      "nicknames": [
+        "spinal needle"
+      ],
+      "category": "Needles",
+      "unit": "box",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 189
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 8
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 35
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10267",
+      "mpn": "MP-498138",
+      "name": "Sterile Saline for Irrigation 1000 mL",
+      "nicknames": [
+        "saline",
+        "irrigation",
+        "warm saline"
+      ],
+      "category": "Irrigation",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 106
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10268",
+      "mpn": "MP-787836",
+      "name": "Sterile Saline for Irrigation 3000 mL",
+      "nicknames": [
+        "saline bag",
+        "3 liter saline"
+      ],
+      "category": "Irrigation",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 127
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 35
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10269",
+      "mpn": "MP-829988",
+      "name": "Sterile Water for Irrigation 1000 mL",
+      "nicknames": [
+        "sterile water",
+        "water"
+      ],
+      "category": "Irrigation",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 38
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 6
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10270",
+      "mpn": "MP-265613",
+      "name": "Pulse Lavage System",
+      "nicknames": [
+        "pulse lavage",
+        "pulsavac"
+      ],
+      "category": "Irrigation",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 126
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 13
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10271",
+      "mpn": "MP-401198",
+      "name": "Chlorhexidine Skin Prep Applicator 26 mL",
+      "nicknames": [
+        "chloraprep",
+        "prep",
+        "chg prep"
+      ],
+      "category": "Skin Prep",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 170
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 6
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 15
+        },
+        {
+          "location_id": "OR-12",
+          "quantity": 7
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-10",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10272",
+      "mpn": "MP-412886",
+      "name": "Povidone-Iodine Prep Kit",
+      "nicknames": [
+        "betadine",
+        "betadine prep"
+      ],
+      "category": "Skin Prep",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 32
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 30
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10273",
+      "mpn": "MP-772464",
+      "name": "Surgical Skin Marker with Ruler",
+      "nicknames": [
+        "marker",
+        "skin marker",
+        "marking pen"
+      ],
+      "category": "Supplies",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 131
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 33
+        },
+        {
+          "location_id": "OR-05",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-04",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 3
+        },
+        {
+          "location_id": "OR-06",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10274",
+      "mpn": "MP-929179",
+      "name": "Vessel Loops, Mini, Red",
+      "nicknames": [
+        "vessel loops",
+        "loops",
+        "red loops"
+      ],
+      "category": "Supplies",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 177
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 26
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10275",
+      "mpn": "MP-967161",
+      "name": "Vessel Loops, Maxi, Blue",
+      "nicknames": [
+        "blue loops"
+      ],
+      "category": "Supplies",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 88
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 7
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10276",
+      "mpn": "MP-600646",
+      "name": "Umbilical Tape, 1/8 in",
+      "nicknames": [
+        "umbilical tape",
+        "umbi tape"
+      ],
+      "category": "Supplies",
+      "unit": "pack",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 68
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 25
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10277",
+      "mpn": "MP-445637",
+      "name": "Needle Counter Box, 40 Count",
+      "nicknames": [
+        "needle counter",
+        "needle box"
+      ],
+      "category": "Supplies",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 190
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 17
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 16
+        },
+        {
+          "location_id": "OR-11",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-02",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10278",
+      "mpn": "MP-267475",
+      "name": "Forced-Air Warming Blanket, Upper Body",
+      "nicknames": [
+        "bair hugger",
+        "upper bair"
+      ],
+      "category": "Warming",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 133
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10279",
+      "mpn": "MP-907236",
+      "name": "Forced-Air Warming Blanket, Lower Body",
+      "nicknames": [
+        "lower bair",
+        "bair hugger lower"
+      ],
+      "category": "Warming",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 35
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 19
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10280",
+      "mpn": "MP-329772",
+      "name": "Sequential Compression Sleeves, Knee, Medium",
+      "nicknames": [
+        "scds",
+        "scds medium"
+      ],
+      "category": "Positioning",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 127
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 39
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10281",
+      "mpn": "MP-593699",
+      "name": "Sequential Compression Sleeves, Knee, Large",
+      "nicknames": [
+        "scds",
+        "scds large"
+      ],
+      "category": "Positioning",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 175
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10282",
+      "mpn": "MP-813390",
+      "name": "Gel Head Ring, Adult",
+      "nicknames": [
+        "donut",
+        "head donut"
+      ],
+      "category": "Positioning",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 25
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10283",
+      "mpn": "MP-181896",
+      "name": "Foam Arm Board Pad",
+      "nicknames": [
+        "arm board pad",
+        "egg crate"
+      ],
+      "category": "Positioning",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 33
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 36
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10284",
+      "mpn": "MP-311976",
+      "name": "Safety Strap, Patient",
+      "nicknames": [
+        "safety strap",
+        "belt"
+      ],
+      "category": "Positioning",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 43
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 34
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 14
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10285",
+      "mpn": "MP-851742",
+      "name": "Specimen Container 120 mL",
+      "nicknames": [
+        "specimen cup"
+      ],
+      "category": "Supplies",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 28
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 4
+        },
+        {
+          "location_id": "OR-03",
+          "quantity": 9
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 8
+        },
+        {
+          "location_id": "OR-07",
+          "quantity": 5
+        },
+        {
+          "location_id": "OR-08",
+          "quantity": 1
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "item_number": "SIF-10286",
+      "mpn": "MP-366817",
+      "name": "Biohazard Specimen Bag",
+      "nicknames": [
+        "specimen bag",
+        "biohazard bag"
+      ],
+      "category": "Supplies",
+      "unit": "each",
+      "image": null,
+      "stock": [
+        {
+          "location_id": "ORMC",
+          "quantity": 195
+        },
+        {
+          "location_id": "CORE-A",
+          "quantity": 5
+        },
+        {
+          "location_id": "CORE-B",
+          "quantity": 23
+        },
+        {
+          "location_id": "OR-09",
+          "quantity": 2
+        },
+        {
+          "location_id": "OR-01",
+          "quantity": 8
+        }
+      ]
+    }
+  ]
+}
