@@ -100,14 +100,14 @@ def test_self_pick_request():
     assert response.status_code == 201
     assert response.json()["status"] == "self_picked"
 
-
 def test_request_unknown_item():
     assert client.post("/requests", json=cart(item_number="NOPE")).status_code == 404
-
 
 def test_request_unknown_or():
     assert client.post("/requests", json=cart(or_id="OR-99")).status_code == 404
 
-
 def test_request_bad_fulfillment():
     assert client.post("/requests", json=cart(fulfillment="drone")).status_code == 422
+
+def test_missing_item_image_is_404():
+    assert client.get("/images/NOPE.webp").status_code == 404

@@ -21,8 +21,12 @@ request_store = RequestStore(inventory, os.getenv("REQUESTS_DB", str(DEFAULT_REQ
 
 
 FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+ITEM_IMAGES = Path(__file__).resolve().parent.parent / "data" / "images"
 
 app = FastAPI(title="Surgical Item Finder")
+# Item photos made by scripts/generate_images.py, e.g. /images/SIF-10107.webp
+ITEM_IMAGES.mkdir(parents=True, exist_ok=True)  # folder may not exist on a fresh clone
+app.mount("/images", StaticFiles(directory=ITEM_IMAGES), name="images")
 
 # Serve the built React app (frontend/dist), made by "npm run build"
 if (FRONTEND_DIST / "assets").is_dir():

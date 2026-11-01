@@ -12,6 +12,8 @@ export default defineConfig({
       "/items": BACKEND,
       "/locations": BACKEND,
       "/health": BACKEND,
+      "/requests": BACKEND,
+      "/images": BACKEND,
     },
     // WSL can't see file changes on /mnt/c without polling
     watch: { usePolling: true },

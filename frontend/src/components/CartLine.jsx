@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAvailability } from "../api.js";
+import ItemPhoto from "./ItemPhoto.jsx";
 
 export default function CartLine({ line, orId, onQuantityChange, onRemove }) {
   const { item, quantity } = line;
@@ -21,6 +22,7 @@ export default function CartLine({ line, orId, onQuantityChange, onRemove }) {
 
   return (
     <li className="card cart-line">
+      <ItemPhoto item={item} />
       <div className="card-body">
         <div className="name">{item.name}</div>
         <div className="number">

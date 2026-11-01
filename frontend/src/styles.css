@@ -94,3 +94,7 @@ button.secondary { background: white; color: #0b6bcb; border: 2px solid #0b6bcb;
 .mic { padding: 0 14px; background: #e6ebf0; color: #1c2430; font-size: 1.2rem; }
 .mic.listening { background: #b42318; color: white; animation: pulse 1s infinite; }
 @keyframes pulse { 50% { opacity: 0.6; } }
+
+/* ---- Item photos ---- */
+.photo { width: 64px; height: 64px; flex-shrink: 0; border-radius: 8px; object-fit: contain; background: white; }
+.photo.placeholder { display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 600; color: #8a96a5; }

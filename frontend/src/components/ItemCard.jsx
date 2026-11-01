@@ -1,8 +1,11 @@
+import ItemPhoto from "./ItemPhoto.jsx";
+
 export default function ItemCard({ item, inCart, onAdd }) {
   const total = item.stock.reduce((sum, s) => sum + s.quantity, 0);
 
   return (
     <li className="card">
+      <ItemPhoto item={item} />
       <div className="card-body">
         <div className="name">{item.name}</div>
         <div className="number">
