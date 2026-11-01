@@ -50,6 +50,8 @@ All code, data and assets in this repo were created during the event. Each day's
 - [ ] **Day 4, Nov 2:** Nurse screen: confirm item, photo and quantity, then submit
 - [ ] **Day 5, Nov 3:** Associate screen with live alerts, Accept and Delivered; deploy a live demo
 - [ ] **Day 6, Nov 4:** 3 minute demo video, final polish, submission
+- [ ] **Stretch:** Muse supply insights: track usage from every request (delivered or self-picked), flag high-use items and suggest restocking
+
 
 ## Data and rights
 

@@ -12,9 +12,11 @@ from app.availability import Availability, check_stock
 from app.inventory.json_adapter import JsonAdapter
 from app.models import Item, Location
 from app.search import SearchResult, search
+from app.supply_requests import NewRequest, RequestStore, SupplyRequest, UnknownItemError
 
 DEFAULT_CATALOG = Path(__file__).resolve().parent.parent / "data" / "catalog.json"
 inventory = JsonAdapter(os.getenv("CATALOG_PATH", DEFAULT_CATALOG))
+request_store = RequestStore(inventory)
 
 FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
 
@@ -80,3 +82,20 @@ class AgentRequest(BaseModel):
 @app.post("/agent/find", response_model=AgentResult)
 def agent_find(request: AgentRequest):
     return run_agent(request.query, inventory)
+
+
+
+
+@app.post("/requests", response_model=SupplyRequest, status_code=201)
+def create_request(new: NewRequest):
+    if inventory.get_location(new.or_id) is None:
+        raise HTTPException(status_code=404, detail=f"Unknown OR {new.or_id}")
+    try:
+        return request_store.create(new)
+    except UnknownItemError as error:
+        raise HTTPException(status_code=404, detail=f"Item {error} not found")
+
+
+@app.get("/requests", response_model=list[SupplyRequest])
+def list_requests():
+    return request_store.list()

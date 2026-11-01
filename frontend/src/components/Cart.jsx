@@ -1,6 +1,6 @@
 import CartLine from "./CartLine.jsx";
 
-export default function Cart({ lines, orId, onQuantityChange, onRemove }) {
+export default function Cart({ lines, orId, onQuantityChange, onRemove, onSend, sending }) {
   if (lines.length === 0) return null;
 
   return (
@@ -17,6 +17,14 @@ export default function Cart({ lines, orId, onQuantityChange, onRemove }) {
           />
         ))}
       </ul>
+      <div className="send">
+        <button onClick={() => onSend("ormc_delivery")} disabled={sending}>
+          Deliver from ORMC
+        </button>
+        <button className="secondary" onClick={() => onSend("self_pick")} disabled={sending}>
+          I'll pick it myself
+        </button>
+      </div>
     </section>
   );
 }

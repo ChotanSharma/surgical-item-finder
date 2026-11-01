@@ -77,3 +77,20 @@ header {
 .qty { display: flex; align-items: center; gap: 8px; }
 .qty button { width: 40px; height: 40px; padding: 0; background: #e6ebf0; color: #1c2430; }
 .qty span { min-width: 20px; text-align: center; font-weight: 600; }
+
+
+/* ---- Send request and confirmation ---- */
+.send { display: flex; gap: 8px; margin-top: 16px; }
+.send button { flex: 1; padding: 14px 8px; }
+button.secondary { background: white; color: #0b6bcb; border: 2px solid #0b6bcb; }
+
+.confirmation { margin-top: 24px; padding: 16px; border-radius: 10px; background: #dff3e4; }
+.confirmation h2 { margin: 0; font-size: 1.2rem; }
+.pick-list { margin: 12px 0 16px; padding-left: 20px; }
+.pick-list li { margin-bottom: 8px; }
+.confirmation button { width: 100%; padding: 14px; }
+
+/* ---- Voice input ---- */
+.mic { padding: 0 14px; background: #e6ebf0; color: #1c2430; font-size: 1.2rem; }
+.mic.listening { background: #b42318; color: white; animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: 0.6; } }

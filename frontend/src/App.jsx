@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { findItem } from "./api.js";
+import { findItem, sendRequest } from "./api.js";
 import OrPicker from "./components/OrPicker.jsx";
 import SearchForm from "./components/SearchForm.jsx";
 import ItemCard from "./components/ItemCard.jsx";
 import Cart from "./components/Cart.jsx";
+import RequestConfirmation from "./components/RequestConfirmation.jsx";
 
 const STATUS_TEXT = {
   match: "Found it",
@@ -28,6 +29,8 @@ export default function App() {
   const [error, setError] = useState(null);
   const [notice, setNotice] = useState(null);
   const [cart, setCart] = useState([]); // [{ item, quantity }]
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(null); // the saved request, after Send
 
   function changeOr(newOr) {
     setOrId(newOr);
@@ -38,8 +41,8 @@ export default function App() {
     }
   }
 
-  async function handleSearch() {
-    const trimmed = query.trim();
+  async function handleSearch(text = query) {
+    const trimmed = text.trim();
     if (!trimmed) return;
     setLoading(true);
     setError(null);
@@ -52,6 +55,11 @@ export default function App() {
     } finally {
       setLoading(false);
     }
+  }
+
+  function handleVoice(text) {
+    setQuery(text); // show what was heard, so the nurse can check it
+    handleSearch(text);
   }
 
   function addToCart(item) {
@@ -71,7 +79,31 @@ export default function App() {
     setCart((current) => current.filter((line) => line.item.item_number !== itemNumber));
   }
 
+   async function handleSend(fulfillment) {
+    setSending(true);
+    setError(null);
+    try {
+      setSent(await sendRequest(orId, fulfillment, cart));
+      setCart([]);
+      setNotice(null);
+      setResult(null);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSending(false);
+    }
+  }
+
+
   const inCart = new Set(cart.map((line) => line.item.item_number));
+  
+  if (sent) {
+    return (
+      <main>
+        <RequestConfirmation request={sent} onDone={() => setSent(null)} />
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -79,8 +111,15 @@ export default function App() {
         <h1>Surgical Item Finder</h1>
         <OrPicker value={orId} onChange={changeOr} />
       </header>
-
-      <SearchForm query={query} onQueryChange={setQuery} onSearch={handleSearch} disabled={loading} />
+      
+      <SearchForm
+        query={query}
+        onQueryChange={setQuery}
+        onSearch={() => handleSearch()}
+        onVoice={handleVoice}
+        onVoiceError={setError}
+        disabled={loading}
+      />
 
       {notice && <p className="message match">{notice} ✓</p>}
       {loading && <p className="message">Searching...</p>}
@@ -104,7 +143,14 @@ export default function App() {
         </>
       )}
 
-      <Cart lines={cart} orId={orId} onQuantityChange={changeQuantity} onRemove={removeFromCart} />
+        <Cart
+            lines={cart}
+            orId={orId}
+            onQuantityChange={changeQuantity}
+            onRemove={removeFromCart}
+            onSend={handleSend}
+            sending={sending}
+      />
     </main>
   );
 }

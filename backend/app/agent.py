@@ -14,6 +14,8 @@ MAX_STEPS = 4  # model calls per request, so a confused model can't loop forever
 
 SYSTEM_PROMPT = """You help operating room nurses find surgical supplies in the hospital catalog.
 Nurses type or speak item names, nicknames, brand names or misspellings.
+Spoken requests may be misheard ("Bobby" for "bovie", "lap s" for "laps"),
+so also try sound-alike names.
 
 Rules:
 - Always call find_item before answering. If results don't fit, search again with

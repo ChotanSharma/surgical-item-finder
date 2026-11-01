@@ -76,3 +76,38 @@ def test_availability_bad_or_format():
 def test_availability_unknown_item():
     response = client.get("/items/NOPE/availability", params={"or_id": "OR-03"})
     assert response.status_code == 404
+
+
+def cart(fulfillment="ormc_delivery", or_id="OR-03", item_number="SIF-10107"):
+    return {
+        "or_id": or_id,
+        "fulfillment": fulfillment,
+        "lines": [{"item_number": item_number, "quantity": 2}],
+    }
+
+
+def test_send_request_to_ormc():
+    response = client.post("/requests", json=cart("ormc_delivery"))
+    assert response.status_code == 201
+    request = response.json()
+    assert request["status"] == "sent"
+    assert request["lines"][0]["name"] == "Electrosurgical Pencil, Rocker Switch"
+    assert request["id"] in [r["id"] for r in client.get("/requests").json()]
+
+
+def test_self_pick_request():
+    response = client.post("/requests", json=cart("self_pick"))
+    assert response.status_code == 201
+    assert response.json()["status"] == "self_picked"
+
+
+def test_request_unknown_item():
+    assert client.post("/requests", json=cart(item_number="NOPE")).status_code == 404
+
+
+def test_request_unknown_or():
+    assert client.post("/requests", json=cart(or_id="OR-99")).status_code == 404
+
+
+def test_request_bad_fulfillment():
+    assert client.post("/requests", json=cart(fulfillment="drone")).status_code == 422
