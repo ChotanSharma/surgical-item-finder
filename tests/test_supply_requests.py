@@ -90,9 +90,45 @@ def test_requests_survive_a_restart(tmp_path):
     assert after_restart.get(saved.id) == saved
 
 
-def test_update_status(store):
+def test_first_to_accept_wins(store):
     request = store.create(new_request(SIF_1=1))
-    updated = store.update_status(request.id, "accepted")
-    assert updated.status == "accepted"
-    assert store.get(request.id).status == "accepted"
-    assert store.update_status(99, "accepted") is None
+    accepted = store.accept(request.id, "Maria")
+    assert (accepted.status, accepted.handled_by) == ("accepted", "Maria")
+    assert store.accept(request.id, "Sam") is None  # too late
+    assert store.get(request.id).handled_by == "Maria"
+
+
+def test_only_the_accepter_can_deliver(store):
+    request = store.create(new_request(SIF_1=1))
+    assert store.deliver(request.id, "Maria") is None  # not accepted yet
+    store.accept(request.id, "Maria")
+    assert store.deliver(request.id, "Sam") is None
+    assert store.deliver(request.id, "Maria").status == "delivered"
+
+
+def test_self_pick_cannot_be_accepted(store):
+    request = store.create(new_request("self_pick", SIF_1=1))
+    assert store.accept(request.id, "Maria") is None
+
+
+def test_list_by_status(store):
+    waiting = store.create(new_request(SIF_1=1))
+    store.create(new_request("self_pick", SIF_1=1))
+    assert [r.id for r in store.list(["sent"])] == [waiting.id]
+
+
+def test_old_database_is_upgraded(tmp_path):
+    import sqlite3
+
+    db = str(tmp_path / "old.db")
+    old = sqlite3.connect(db)
+    old.execute(
+        "CREATE TABLE requests (id INTEGER PRIMARY KEY AUTOINCREMENT, or_id TEXT, "
+        "fulfillment TEXT, status TEXT, created_at TEXT, lines TEXT)"
+    )
+    old.commit()
+    old.close()
+    store = RequestStore(InMemoryAdapter(ITEMS, LOCATIONS), db)
+    request = store.create(new_request(SIF_1=1))
+    assert store.accept(request.id, "Maria").handled_by == "Maria"
+

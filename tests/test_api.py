@@ -111,3 +111,34 @@ def test_request_bad_fulfillment():
 
 def test_missing_item_image_is_404():
     assert client.get("/images/NOPE.webp").status_code == 404
+
+
+
+def test_ormc_page():
+    assert client.get("/ormc").status_code == 200
+
+
+def test_accept_and_deliver_flow():
+    request_id = client.post("/requests", json=cart("ormc_delivery")).json()["id"]
+    assert client.get(f"/requests/{request_id}").json()["status"] == "sent"
+    assert request_id in [r["id"] for r in client.get("/requests", params={"status": "sent"}).json()]
+
+    accepted = client.post(f"/requests/{request_id}/accept", json={"associate": "Maria"})
+    assert accepted.status_code == 200
+    assert accepted.json()["handled_by"] == "Maria"
+
+    too_late = client.post(f"/requests/{request_id}/accept", json={"associate": "Sam"})
+    assert too_late.status_code == 409
+    assert "Maria" in too_late.json()["detail"]
+
+    delivered = client.post(f"/requests/{request_id}/deliver", json={"associate": "Maria"})
+    assert delivered.json()["status"] == "delivered"
+
+
+def test_accept_unknown_request():
+    assert client.post("/requests/999999/accept", json={"associate": "Maria"}).status_code == 404
+
+
+def test_accept_needs_a_name():
+    request_id = client.post("/requests", json=cart("ormc_delivery")).json()["id"]
+    assert client.post(f"/requests/{request_id}/accept", json={"associate": ""}).status_code == 422

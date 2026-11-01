@@ -44,10 +44,10 @@ The Meta model is not a simple search box. It runs as an agent with tools:
 
 All code, data and assets in this repo were created during the event. Each day's work is in the commit history.
 
-- [ ] **Day 1, Oct 30:** README, roadmap, project setup, made-up catalog of about 300 surgical items with nicknames and stock by location
-- [ ] **Day 2, Oct 31:** Item search with typed input and the agent's `find_item` tool
-- [ ] **Day 3, Nov 1:** Voice input, stock lookup and nearest-location ranking
-- [ ] **Day 4, Nov 2:** Nurse screen: confirm item, photo and quantity, then submit
+- [x] **Day 1, Oct 30:** README, roadmap, project setup, made-up catalog of about 300 surgical items with nicknames and stock by location
+- [x] **Day 2, Oct 31:** Item search with typed input and the agent's `find_item` tool
+- [X] **Day 3, Nov 1:** Voice input, stock lookup and nearest-location ranking
+- [X] **Day 4, Nov 2:** Nurse screen: confirm item, photo and quantity, then submit
 - [ ] **Day 5, Nov 3:** Associate screen with live alerts, Accept and Delivered; deploy a live demo
 - [ ] **Day 6, Nov 4:** 3 minute demo video, final polish, submission
 - [ ] **Stretch:** Muse supply insights: track usage from every request (delivered or self-picked), flag high-use items and suggest restocking
@@ -59,8 +59,8 @@ All inventory data is **made up for this demo**. No real hospital or patient dat
 
 ## Credits
 
-- Meta AI models: _to be added_
-- Image credits: _to be added_
+- Meta AI models: Muse Spark 1.3 (agent) and Muse Image 1.0 (item photos), via the Meta Model API
+- Image credits: all items images generated for this project with Muse Image 1.0
 
 ## License
 

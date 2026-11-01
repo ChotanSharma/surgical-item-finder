@@ -1,8 +1,6 @@
 import json
 import sqlite3
 from datetime import datetime, timezone
-
-from datetime import datetime, timezone
 from threading import Lock
 from typing import Literal
 
@@ -47,21 +45,12 @@ class SupplyRequest(BaseModel):
     status: Status
     created_at: datetime
     lines: list[PickLine]
+    handled_by: str | None = None  # the ORMC associate who accepted it
 
 
 class UnknownItemError(ValueError):
     pass
 
-
-class RequestStore:
-    
-    def list(self) -> list[SupplyRequest]:
-        return list(reversed(self._requests))  # newest first
-
-    def get(self, request_id: int) -> SupplyRequest | None:
-        if 1 <= request_id <= len(self._requests):
-            return self._requests[request_id - 1]
-        return None
 
 class RequestStore:
     """Saves every request in a SQLite database file. Every cart is recorded,
@@ -71,6 +60,7 @@ class RequestStore:
         self.inventory = inventory
         # One shared connection; the lock stops two requests writing at the same moment
         self._db = sqlite3.connect(db_path, check_same_thread=False)
+        self._db.row_factory = sqlite3.Row  # read columns by name: row["status"]
         self._lock = Lock()
         with self._lock, self._db:
             self._db.execute(
@@ -83,6 +73,10 @@ class RequestStore:
                     lines       TEXT NOT NULL  -- the pick lines, stored as JSON
                 )"""
             )
+            # Upgrade databases made before handled_by existed
+            columns = [row["name"] for row in self._db.execute("PRAGMA table_info(requests)")]
+            if "handled_by" not in columns:
+                self._db.execute("ALTER TABLE requests ADD COLUMN handled_by TEXT")
 
     def create(self, new: NewRequest) -> SupplyRequest:
         lines = []
@@ -124,12 +118,15 @@ class RequestStore:
             lines=lines,
         )
 
-    def list(self, limit: int = 100) -> list[SupplyRequest]:
-        """Newest first."""
+    def list(self, statuses: list[str] | None = None, limit: int = 100) -> list[SupplyRequest]:
+        """Newest first, optionally only some statuses (e.g. ["sent", "accepted"])."""
+        sql, params = "SELECT * FROM requests", []
+        if statuses:
+            sql += f" WHERE status IN ({', '.join('?' for _ in statuses)})"
+            params += statuses
+        sql += " ORDER BY id DESC LIMIT ?"
         with self._lock:
-            rows = self._db.execute(
-                "SELECT * FROM requests ORDER BY id DESC LIMIT ?", (limit,)
-            ).fetchall()
+            rows = self._db.execute(sql, [*params, limit]).fetchall()
         return [self._to_request(row) for row in rows]
 
     def get(self, request_id: int) -> SupplyRequest | None:
@@ -137,20 +134,38 @@ class RequestStore:
             row = self._db.execute("SELECT * FROM requests WHERE id = ?", (request_id,)).fetchone()
         return self._to_request(row) if row else None
 
-    def update_status(self, request_id: int, status: Status) -> SupplyRequest | None:
-        """Used on Day 5 when an associate taps Accept or Delivered."""
+    def accept(self, request_id: int, associate: str) -> SupplyRequest | None:
+        """First associate to accept wins. None means it wasn't waiting any more."""
+        return self._move(request_id, "sent", "accepted", associate)
+
+    def deliver(self, request_id: int, associate: str) -> SupplyRequest | None:
+        """Only the associate who accepted it can mark it delivered."""
+        return self._move(request_id, "accepted", "delivered", associate)
+
+    def _move(self, request_id: int, from_status: str, to_status: str, associate: str):
+        # One UPDATE that also checks the current status, so two associates
+        # tapping Accept at the same moment can't both win
         with self._lock, self._db:
-            self._db.execute("UPDATE requests SET status = ? WHERE id = ?", (status, request_id))
-        return self.get(request_id)
+            if from_status == "sent":
+                cursor = self._db.execute(
+                    "UPDATE requests SET status = ?, handled_by = ? WHERE id = ? AND status = ?",
+                    (to_status, associate, request_id, from_status),
+                )
+            else:
+                cursor = self._db.execute(
+                    "UPDATE requests SET status = ? WHERE id = ? AND status = ? AND handled_by = ?",
+                    (to_status, request_id, from_status, associate),
+                )
+        return self.get(request_id) if cursor.rowcount == 1 else None
 
     @staticmethod
-    def _to_request(row) -> SupplyRequest:
-        request_id, or_id, fulfillment, status, created_at, lines = row
+    def _to_request(row: sqlite3.Row) -> SupplyRequest:
         return SupplyRequest(
-            id=request_id,
-            or_id=or_id,
-            fulfillment=fulfillment,
-            status=status,
-            created_at=datetime.fromisoformat(created_at),
-            lines=json.loads(lines),
-        )
+            id=row["id"],
+            or_id=row["or_id"],
+            fulfillment=row["fulfillment"],
+            status=row["status"],
+            created_at=datetime.fromisoformat(row["created_at"]),
+            lines=json.loads(row["lines"]),
+            handled_by=row["handled_by"],
+    )
