@@ -55,3 +55,25 @@ button:disabled { opacity: 0.6; }
 .stock { margin-top: 6px; font-size: 0.9rem; font-weight: 600; }
 .stock.in { color: #1e7b34; }
 .stock.out { color: #b42318; }
+
+/* OR picker, Add button, cart ---- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.or-picker { display: flex; align-items: center; gap: 6px; font-size: 0.9rem; color: #5a6675; }
+.or-picker select { padding: 8px; font-size: 1rem; border-radius: 8px; border: 2px solid #c8d0da; }
+
+.card { display: flex; align-items: center; gap: 12px; cursor: default; }
+.card-body { flex: 1; min-width: 0; }
+.add { padding: 12px 16px; font-size: 1rem; }
+
+.cart { margin-top: 24px; padding-top: 8px; border-top: 2px solid #c8d0da; }
+.cart h2 { margin: 8px 0 0; font-size: 1.1rem; }
+.where { margin-top: 6px; font-size: 0.9rem; }
+.qty { display: flex; align-items: center; gap: 8px; }
+.qty button { width: 40px; height: 40px; padding: 0; background: #e6ebf0; color: #1c2430; }
+.qty span { min-width: 20px; text-align: center; font-weight: 600; }

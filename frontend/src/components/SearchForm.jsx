@@ -1,12 +1,7 @@
-import { useState } from "react";
-
-export default function SearchForm({ onSearch, disabled }) {
-  const [query, setQuery] = useState("");
-
+export default function SearchForm({ query, onQueryChange, onSearch, disabled }) {
   function handleSubmit(event) {
     event.preventDefault(); // stop the browser from reloading the page
-    const trimmed = query.trim();
-    if (trimmed) onSearch(trimmed);
+    onSearch();
   }
 
   return (
@@ -14,8 +9,8 @@ export default function SearchForm({ onSearch, disabled }) {
       <input
         type="search"
         value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="What do you need?"
+        onChange={(event) => onQueryChange(event.target.value)}
+        placeholder='What do you need? e.g. "bovie"'
         autoComplete="off"
       />
       <button type="submit" disabled={disabled}>

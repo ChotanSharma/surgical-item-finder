@@ -1,16 +1,21 @@
-export default function ItemCard({ item, selected, onSelect }) {
+export default function ItemCard({ item, inCart, onAdd }) {
   const total = item.stock.reduce((sum, s) => sum + s.quantity, 0);
 
   return (
-    <li className={selected ? "card selected" : "card"} onClick={onSelect}>
-      <div className="name">{item.name}</div>
-      <div className="number">
-        {item.item_number} · {item.unit}
+    <li className="card">
+      <div className="card-body">
+        <div className="name">{item.name}</div>
+        <div className="number">
+          {item.item_number} · {item.unit}
+        </div>
+        <div className="nicknames">{item.nicknames.join(", ")}</div>
+        <div className={total > 0 ? "stock in" : "stock out"}>
+          {total > 0 ? `${total} in stock` : "Out of stock"}
+        </div>
       </div>
-      <div className="nicknames">{item.nicknames.join(", ")}</div>
-      <div className={total > 0 ? "stock in" : "stock out"}>
-        {total > 0 ? `${total} in stock` : "Out of stock"}
-      </div>
+      <button className="add" onClick={onAdd} disabled={inCart || total === 0}>
+        {inCart ? "In cart ✓" : "Add"}
+      </button>
     </li>
   );
 }
