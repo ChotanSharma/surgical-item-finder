@@ -51,3 +51,28 @@ def test_home_page():
     response = client.get("/")
     assert response.status_code == 200
     assert "Surgical Item Finder" in response.text
+
+
+
+def test_availability():
+    response = client.get("/items/SIF-10107/availability", params={"or_id": "OR-03"})
+    assert response.status_code == 200
+    results = response.json()
+    assert results, "the bovie pencil should be stocked somewhere"
+    minutes = [r["walk_minutes"] for r in results if r["location"]["kind"] != "or"]
+    assert minutes == sorted(minutes)
+
+
+def test_availability_unknown_or():
+    response = client.get("/items/SIF-10107/availability", params={"or_id": "OR-99"})
+    assert response.status_code == 404
+
+
+def test_availability_bad_or_format():
+    response = client.get("/items/SIF-10107/availability", params={"or_id": "kitchen"})
+    assert response.status_code == 422
+
+
+def test_availability_unknown_item():
+    response = client.get("/items/NOPE/availability", params={"or_id": "OR-03"})
+    assert response.status_code == 404

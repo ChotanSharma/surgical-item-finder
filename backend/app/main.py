@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from app.agent import AgentResult, run_agent
+from app.availability import Availability, check_stock   
 from app.inventory.json_adapter import JsonAdapter
 from app.models import Item, Location
 from app.search import SearchResult, search
@@ -54,6 +55,18 @@ def get_item(item_number: str):
         raise HTTPException(status_code=404, detail=f"Item {item_number} not found")
     return item
 
+@app.get("/items/{item_number}/availability", response_model=list[Availability])
+def item_availability(
+    item_number: str,
+    or_id: str = Query(pattern=r"^OR-\d{2}$", description="The nurse's OR, e.g. OR-03"),
+    quantity: int = Query(1, ge=1, le=100),
+):
+    item = inventory.get_item(item_number)
+    if item is None:
+        raise HTTPException(status_code=404, detail=f"Item {item_number} not found")
+    if inventory.get_location(or_id) is None:
+        raise HTTPException(status_code=404, detail=f"Unknown OR {or_id}")
+    return check_stock(inventory, item, or_id, quantity)
 
 @app.get("/locations", response_model=list[Location])
 def list_locations():
