@@ -1,3 +1,7 @@
+import json
+import sqlite3
+from datetime import datetime, timezone
+
 from datetime import datetime, timezone
 from threading import Lock
 from typing import Literal
@@ -50,13 +54,35 @@ class UnknownItemError(ValueError):
 
 
 class RequestStore:
-    """Keeps every request in memory. Every cart is recorded, delivered or
-    self-picked, so usage history builds up for later supply insights."""
+    
+    def list(self) -> list[SupplyRequest]:
+        return list(reversed(self._requests))  # newest first
 
-    def __init__(self, inventory: InventoryAdapter):
+    def get(self, request_id: int) -> SupplyRequest | None:
+        if 1 <= request_id <= len(self._requests):
+            return self._requests[request_id - 1]
+        return None
+
+class RequestStore:
+    """Saves every request in a SQLite database file. Every cart is recorded,
+    delivered or self-picked, so usage history builds up for later supply insights."""
+
+    def __init__(self, inventory: InventoryAdapter, db_path: str = ":memory:"):
         self.inventory = inventory
-        self._requests: list[SupplyRequest] = []
-        self._lock = Lock()  # two nurses submitting at once can't get the same id
+        # One shared connection; the lock stops two requests writing at the same moment
+        self._db = sqlite3.connect(db_path, check_same_thread=False)
+        self._lock = Lock()
+        with self._lock, self._db:
+            self._db.execute(
+                """CREATE TABLE IF NOT EXISTS requests (
+                    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+                    or_id       TEXT NOT NULL,
+                    fulfillment TEXT NOT NULL,
+                    status      TEXT NOT NULL,
+                    created_at  TEXT NOT NULL,
+                    lines       TEXT NOT NULL  -- the pick lines, stored as JSON
+                )"""
+            )
 
     def create(self, new: NewRequest) -> SupplyRequest:
         lines = []
@@ -75,22 +101,56 @@ class RequestStore:
                     pick_from_name=best.name if best else None,
                 )
             )
-        with self._lock:
-            request = SupplyRequest(
-                id=len(self._requests) + 1,
-                or_id=new.or_id,
-                fulfillment=new.fulfillment,
-                status="sent" if new.fulfillment == "ormc_delivery" else "self_picked",
-                created_at=datetime.now(timezone.utc),
-                lines=lines,
+        status = "sent" if new.fulfillment == "ormc_delivery" else "self_picked"
+        created_at = datetime.now(timezone.utc)
+        with self._lock, self._db:  # "with self._db" commits when the block ends
+            cursor = self._db.execute(
+                "INSERT INTO requests (or_id, fulfillment, status, created_at, lines) "
+                "VALUES (?, ?, ?, ?, ?)",
+                (
+                    new.or_id,
+                    new.fulfillment,
+                    status,
+                    created_at.isoformat(),
+                    json.dumps([line.model_dump() for line in lines]),
+                ),
             )
-            self._requests.append(request)
-        return request
+        return SupplyRequest(
+            id=cursor.lastrowid,
+            or_id=new.or_id,
+            fulfillment=new.fulfillment,
+            status=status,
+            created_at=created_at,
+            lines=lines,
+        )
 
-    def list(self) -> list[SupplyRequest]:
-        return list(reversed(self._requests))  # newest first
+    def list(self, limit: int = 100) -> list[SupplyRequest]:
+        """Newest first."""
+        with self._lock:
+            rows = self._db.execute(
+                "SELECT * FROM requests ORDER BY id DESC LIMIT ?", (limit,)
+            ).fetchall()
+        return [self._to_request(row) for row in rows]
 
     def get(self, request_id: int) -> SupplyRequest | None:
-        if 1 <= request_id <= len(self._requests):
-            return self._requests[request_id - 1]
-        return None
+        with self._lock:
+            row = self._db.execute("SELECT * FROM requests WHERE id = ?", (request_id,)).fetchone()
+        return self._to_request(row) if row else None
+
+    def update_status(self, request_id: int, status: Status) -> SupplyRequest | None:
+        """Used on Day 5 when an associate taps Accept or Delivered."""
+        with self._lock, self._db:
+            self._db.execute("UPDATE requests SET status = ? WHERE id = ?", (status, request_id))
+        return self.get(request_id)
+
+    @staticmethod
+    def _to_request(row) -> SupplyRequest:
+        request_id, or_id, fulfillment, status, created_at, lines = row
+        return SupplyRequest(
+            id=request_id,
+            or_id=or_id,
+            fulfillment=fulfillment,
+            status=status,
+            created_at=datetime.fromisoformat(created_at),
+            lines=json.loads(lines),
+        )

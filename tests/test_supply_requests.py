@@ -78,3 +78,21 @@ def test_unknown_item_is_rejected(store):
 def test_empty_cart_is_rejected():
     with pytest.raises(ValidationError):
         NewRequest(or_id="OR-01", fulfillment="self_pick", lines=[])
+
+
+
+def test_requests_survive_a_restart(tmp_path):
+    db = str(tmp_path / "requests.db")
+    inventory = InMemoryAdapter(ITEMS, LOCATIONS)
+    saved = RequestStore(inventory, db).create(new_request(SIF_1=2))
+
+    after_restart = RequestStore(inventory, db)  # a brand new store, same file
+    assert after_restart.get(saved.id) == saved
+
+
+def test_update_status(store):
+    request = store.create(new_request(SIF_1=1))
+    updated = store.update_status(request.id, "accepted")
+    assert updated.status == "accepted"
+    assert store.get(request.id).status == "accepted"
+    assert store.update_status(99, "accepted") is None

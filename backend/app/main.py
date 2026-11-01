@@ -16,7 +16,9 @@ from app.supply_requests import NewRequest, RequestStore, SupplyRequest, Unknown
 
 DEFAULT_CATALOG = Path(__file__).resolve().parent.parent / "data" / "catalog.json"
 inventory = JsonAdapter(os.getenv("CATALOG_PATH", DEFAULT_CATALOG))
-request_store = RequestStore(inventory)
+DEFAULT_REQUESTS_DB = Path(__file__).resolve().parent.parent / "data" / "requests.db"
+request_store = RequestStore(inventory, os.getenv("REQUESTS_DB", str(DEFAULT_REQUESTS_DB)))
+
 
 FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
 
