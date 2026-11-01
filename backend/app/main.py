@@ -2,6 +2,9 @@ import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
+
 from pydantic import BaseModel, Field
 
 from app.agent import AgentResult, run_agent
@@ -12,8 +15,24 @@ from app.search import SearchResult, search
 DEFAULT_CATALOG = Path(__file__).resolve().parent.parent / "data" / "catalog.json"
 inventory = JsonAdapter(os.getenv("CATALOG_PATH", DEFAULT_CATALOG))
 
+FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+
 app = FastAPI(title="Surgical Item Finder")
 
+# Serve the built React app (frontend/dist), made by "npm run build"
+if (FRONTEND_DIST / "assets").is_dir():
+    app.mount("/assets", StaticFiles(directory=FRONTEND_DIST / "assets"), name="assets")
+
+
+@app.get("/", include_in_schema=False)
+def home():
+    index = FRONTEND_DIST / "index.html"
+    if index.exists():
+        return FileResponse(index)
+    return HTMLResponse(
+        "<h1>Surgical Item Finder</h1>"
+        "<p>Frontend not built yet. Run: cd frontend && npm install && npm run build</p>"
+    )
 
 @app.get("/health")
 def health():

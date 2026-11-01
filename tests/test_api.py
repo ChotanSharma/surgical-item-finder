@@ -46,3 +46,8 @@ def test_agent_endpoint(monkeypatch):
 
 def test_agent_endpoint_rejects_empty_query():
     assert client.post("/agent/find", json={"query": ""}).status_code == 422
+
+def test_home_page():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert "Surgical Item Finder" in response.text

@@ -1,0 +1,57 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f6f8;
+  color: #1c2430;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 560px;
+  padding: 16px;
+}
+
+h1 { margin: 0; font-size: 1.4rem; }
+.sub { margin: 4px 0 16px; color: #5a6675; font-size: 0.9rem; }
+
+form { display: flex; gap: 8px; }
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: 2px solid #c8d0da;
+  border-radius: 10px;
+}
+button {
+  padding: 0 20px;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 10px;
+  background: #0b6bcb;
+  color: white;
+}
+button:disabled { opacity: 0.6; }
+
+.message { margin: 16px 0 8px; padding: 10px 12px; border-radius: 8px; background: #e6ebf0; }
+.message.match { background: #dff3e4; }
+.message.clarify { background: #fff4d6; }
+.message.not_found { background: #fde2e2; }
+
+.results { list-style: none; margin: 0; padding: 0; }
+.card {
+  margin-top: 10px;
+  padding: 14px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+}
+.card.selected { border-color: #0b6bcb; }
+.name { font-weight: 600; }
+.number, .nicknames { margin-top: 4px; color: #5a6675; font-size: 0.9rem; }
+.stock { margin-top: 6px; font-size: 0.9rem; font-weight: 600; }
+.stock.in { color: #1e7b34; }
+.stock.out { color: #b42318; }
