@@ -2,7 +2,9 @@ import os
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel, Field
 
+from app.agent import AgentResult, run_agent
 from app.inventory.json_adapter import JsonAdapter
 from app.models import Item, Location
 from app.search import SearchResult, search
@@ -37,3 +39,12 @@ def get_item(item_number: str):
 @app.get("/locations", response_model=list[Location])
 def list_locations():
     return inventory.list_locations()
+
+
+class AgentRequest(BaseModel):
+    query: str = Field(min_length=1, max_length=200)
+
+
+@app.post("/agent/find", response_model=AgentResult)
+def agent_find(request: AgentRequest):
+    return run_agent(request.query, inventory)
