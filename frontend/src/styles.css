@@ -103,3 +103,15 @@ button.secondary { background: white; color: #0b6bcb; border: 2px solid #0b6bcb;
 /* ---- Review before sending ---- */
 .review h2 { margin: 8px 0 4px; font-size: 1.3rem; }
 .review-qty { font-size: 1.3rem; font-weight: 700; }
+
+
+/* ---- ORMC screen ---- */
+.section { margin: 24px 0 4px; font-size: 1.05rem; }
+.ticket { margin-top: 10px; padding: 14px; border-radius: 12px; background: white; border-left: 6px solid #c8d0da; }
+.ticket.sent { border-left-color: #b42318; }
+.ticket.accepted { border-left-color: #0b6bcb; }
+.ticket.faded { opacity: 0.55; }
+.ticket-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.ticket-or { font-size: 1.6rem; font-weight: 700; }
+.ticket .card { padding: 8px 0; margin-top: 4px; }
+.ticket-action { width: 100%; margin-top: 10px; padding: 16px; font-size: 1.2rem; }
