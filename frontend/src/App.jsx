@@ -5,6 +5,7 @@ import SearchForm from "./components/SearchForm.jsx";
 import ItemCard from "./components/ItemCard.jsx";
 import Cart from "./components/Cart.jsx";
 import RequestConfirmation from "./components/RequestConfirmation.jsx";
+import ReviewRequest from "./components/ReviewRequest.jsx";
 
 const STATUS_TEXT = {
   match: "Found it",
@@ -31,6 +32,7 @@ export default function App() {
   const [cart, setCart] = useState([]); // [{ item, quantity }]
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(null); // the saved request, after Send
+  const [reviewing, setReviewing] = useState(null); // "ormc_delivery" or "self_pick" while confirming
 
   function changeOr(newOr) {
     setOrId(newOr);
@@ -84,6 +86,7 @@ export default function App() {
     setError(null);
     try {
       setSent(await sendRequest(orId, fulfillment, cart));
+      setReviewing(null);
       setCart([]);
       setNotice(null);
       setResult(null);
@@ -97,6 +100,26 @@ export default function App() {
 
   const inCart = new Set(cart.map((line) => line.item.item_number));
   
+    if (reviewing) {
+    return (
+      <main>
+        <ReviewRequest
+          lines={cart}
+          orId={orId}
+          fulfillment={reviewing}
+          onConfirm={() => handleSend(reviewing)}
+          onBack={() => {
+            setReviewing(null);
+            setError(null);
+          }}
+          sending={sending}
+          error={error}
+        />
+      </main>
+    );
+  }
+
+
   if (sent) {
     return (
       <main>
@@ -111,7 +134,7 @@ export default function App() {
         <h1>Surgical Item Finder</h1>
         <OrPicker value={orId} onChange={changeOr} />
       </header>
-      
+
       <SearchForm
         query={query}
         onQueryChange={setQuery}
@@ -148,7 +171,7 @@ export default function App() {
             orId={orId}
             onQuantityChange={changeQuantity}
             onRemove={removeFromCart}
-            onSend={handleSend}
+            onSend={setReviewing}
             sending={sending}
       />
     </main>
