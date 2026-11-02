@@ -115,3 +115,10 @@ button.secondary { background: white; color: #0b6bcb; border: 2px solid #0b6bcb;
 .ticket-or { font-size: 1.6rem; font-weight: 700; }
 .ticket .card { padding: 8px 0; margin-top: 4px; }
 .ticket-action { width: 100%; margin-top: 10px; padding: 16px; font-size: 1.2rem; }
+
+
+/* ---- Live status on the nurse's confirmation ---- */
+.confirmation.sent, .confirmation.accepted { background: #e6f0fb; }
+.tracker { list-style: none; margin: 12px 0; padding: 0; }
+.tracker li { padding: 6px 0 6px 12px; border-left: 4px solid #c8d0da; color: #6b7785; }
+.tracker li.done { border-left-color: #1a7f37; color: inherit; font-weight: 600; }
