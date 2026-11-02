@@ -7,6 +7,8 @@ import Cart from "./components/Cart.jsx";
 import RequestConfirmation from "./components/RequestConfirmation.jsx";
 import ReviewRequest from "./components/ReviewRequest.jsx";
 
+const EXAMPLES = ["bovie", "Bobby", "lap sponge", "yankauer"]; // tap to try
+
 const STATUS_TEXT = {
   match: "Found it",
   clarify: "Which one?",
@@ -130,11 +132,16 @@ export default function App() {
 
   return (
     <main>
-      <header>
-        <h1>Surgical Item Finder</h1>
+            <header className="appbar">
+        <div className="brand">
+          <span className="logo">+</span>
+          <div>
+            <h1>Surgical Item Finder</h1>
+            <div className="tagline">Find it. Send it. No phone call.</div>
+          </div>
+        </div>
         <OrPicker value={orId} onChange={changeOr} />
       </header>
-
       <SearchForm
         query={query}
         onQueryChange={setQuery}
@@ -143,7 +150,18 @@ export default function App() {
         onVoiceError={setError}
         disabled={loading}
       />
-
+            {!result && !loading && !error && cart.length === 0 && (
+        <section className="hint">
+          <p>Try saying or tapping:</p>
+          <div className="chips">
+            {EXAMPLES.map((text) => (
+              <button key={text} className="chip" onClick={() => handleVoice(text)}>
+                {text}
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
       {notice && <p className="message match">{notice} ✓</p>}
       {loading && <p className="message">Searching...</p>}
       {error && <p className="message not_found">Something went wrong. {error}</p>}

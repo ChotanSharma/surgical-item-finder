@@ -12,7 +12,7 @@ export default function SearchForm({ query, onQueryChange, onSearch, onVoice, on
         type="search"
         value={query}
         onChange={(event) => onQueryChange(event.target.value)}
-        placeholder='Type or say it, e.g. "bovie"'
+        placeholder="Item or nickname"
         autoComplete="off"
       />
       <VoiceButton onResult={onVoice} onError={onVoiceError} disabled={disabled} />

@@ -5,7 +5,9 @@ export default function Cart({ lines, orId, onQuantityChange, onRemove, onSend, 
 
   return (
     <section className="cart">
-      <h2>Cart ({lines.length})</h2>
+      <h2>
+        Cart <span className="count">{lines.length}</span>
+      </h2>
       <ul className="results">
         {lines.map((line) => (
           <CartLine

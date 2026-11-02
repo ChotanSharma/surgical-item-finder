@@ -13,6 +13,20 @@ function loadName() {
   }
 }
 
+function OrmcHeader({ line }) {
+  return (
+    <header className="appbar">
+      <div className="brand">
+        <span className="logo">+</span>
+        <div>
+          <h1>ORMC requests</h1>
+          <div className="tagline">{line}</div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
 export default function OrmcApp() {
   const [name, setName] = useState(loadName);
   const [onShift, setOnShift] = useState(false);
@@ -74,9 +88,7 @@ export default function OrmcApp() {
   if (!onShift) {
     return (
       <main>
-        <header>
-          <h1>ORMC requests</h1>
-        </header>
+        <OrmcHeader line="Materials core · start your shift" />
         <form onSubmit={startShift}>
           <input
             value={name}
@@ -97,11 +109,7 @@ export default function OrmcApp() {
 
   return (
     <main>
-      <header>
-        <h1>ORMC requests</h1>
-        <span className="sub">On shift: {name}</span>
-      </header>
-
+     <OrmcHeader line={<span className="live">Live · on shift: {name}</span>} />
       {error && <p className="message not_found">{error}</p>}
 
       <h2 className="section">On my way ({mine.length})</h2>
