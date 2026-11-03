@@ -1,7 +1,8 @@
 import json
-from typing import Any, Literal
+from typing import Literal
 
 from openai import OpenAI, OpenAIError
+from openai.types.chat import ChatCompletionMessageParam, ChatCompletionToolParam
 from pydantic import BaseModel
 
 from app import config, openfda
@@ -36,7 +37,7 @@ Rules:
 - This is supply logistics only. Never give medical advice or suggest which item to use.
 - Keep the message under 25 words."""
 
-TOOLS = [
+TOOLS: list[ChatCompletionToolParam] = [
     {
         "type": "function",
         "function": {
@@ -205,7 +206,7 @@ def run_agent(
 ) -> AgentResult:
     fda_devices: list[FdaDevice] = []  # from the latest lookup_fda_devices call
     fda_tried = False
-    messages: list[dict[str, Any]] = [
+    messages: list[ChatCompletionMessageParam] = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": query},
     ]
