@@ -14,6 +14,8 @@ const STATUS_TEXT = {
   clarify: "Which one?",
   not_found: "Not found",
   fallback: "Search results",
+  not_in_catalog: "Not stocked here",
+
 };
 
 function loadOr() {

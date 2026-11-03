@@ -137,3 +137,74 @@ def test_missing_key_falls_back_to_search(inventory, monkeypatch):
     monkeypatch.setattr(config, "LLM_API_KEY", "")
     result = agent.run_agent("bovie", inventory)
     assert result.status == "fallback"
+
+
+
+# ---- not in our catalog: FDA lookup ----
+
+from app.openfda import FdaDevice, FdaError  # noqa: E402
+
+KITTNER = FdaDevice(
+    brand="Secto", company="Aspen Surgical", model_number="81-1001",
+    description="Secto Dissector, Kittner, single use", in_distribution=True, recalls_checked=True,
+)
+
+
+def fake_fda(*devices):
+    """Stands in for openfda.search_devices and records what it was asked."""
+    asked = []
+
+    def search_devices(description):
+        asked.append(description)
+        return list(devices)
+
+    search_devices.asked = asked
+    return search_devices
+
+
+def test_not_in_catalog_shows_fda_devices(inventory):
+    fda = fake_fda(KITTNER)
+    client = FakeClient([
+        reply(tool_call("c1", "find_item", {"query": "kittner"})),
+        reply(tool_call("c2", "lookup_fda_devices", {"description": "kittner dissector"})),
+        reply(tool_call("c3", "answer", {
+            "status": "not_in_catalog", "item_numbers": [], "message": "We don't stock it.",
+        })),
+    ])
+    result = agent.run_agent("kittner", inventory, client=client, model="test", fda_search=fda)
+    assert result.status == "not_in_catalog"
+    assert result.fda_devices == [KITTNER]
+    assert result.items == []
+    assert fda.asked == ["kittner dissector"]
+    # the model saw a short summary, including "still_sold"
+    tool_messages = [m for m in client.sent[2] if m["role"] == "tool"]
+    assert '"still_sold": true' in tool_messages[-1]["content"]
+
+
+def test_fda_model_we_stock_is_flagged(inventory):
+    bovie_mpn = inventory.get_item(BOVIE_PENCIL).mpn
+    same_model = KITTNER.model_copy(update={"model_number": bovie_mpn})
+    devices, summary = agent.lookup_fda_devices(inventory, "pencil", fake_fda(same_model))
+    assert summary[0]["in_our_catalog"] == BOVIE_PENCIL
+
+
+def test_fda_error_is_told_to_the_model(inventory):
+    def down(description):
+        raise FdaError("FDA lookup unavailable")
+
+    devices, summary = agent.lookup_fda_devices(inventory, "kittner", down)
+    assert devices == []
+    assert summary == {"error": "FDA lookup unavailable"}
+
+
+def test_not_in_catalog_without_lookup_becomes_not_found(inventory):
+    client = FakeClient([
+        reply(tool_call("c1", "answer", {
+            "status": "not_in_catalog", "item_numbers": [], "message": "Try Acme model X.",
+        })),
+    ])
+    result = agent.run_agent("kittner", inventory, client=client, model="test", fda_search=fake_fda())
+    assert result.status == "not_found"
+    assert result.fda_devices == []
+    assert "Acme" not in result.message  # the model's made-up product isn't shown
+
