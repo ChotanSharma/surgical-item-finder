@@ -9,6 +9,7 @@ export default function SearchForm({ query, onQueryChange, onSearch, onVoice, on
   return (
     <form onSubmit={handleSubmit}>
       <input
+        id="search"
         type="search"
         value={query}
         onChange={(event) => onQueryChange(event.target.value)}
