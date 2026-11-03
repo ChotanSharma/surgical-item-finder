@@ -26,7 +26,14 @@ export default function RequestTicket({ request, actionLabel, onAction, busy, fa
                 {line.quantity} × {line.name}
               </div>
               <div className="number">
-                {line.item_number} · {line.pick_from_name ? `Pick from ${line.pick_from_name}` : "Check ORMC stock"}
+                {line.sourcing ? (
+                  <span className="sourcing-note">{line.pick_from_name}</span>
+                ) : (
+                  <>
+                    {line.item_number} ·{" "}
+                    {line.pick_from_name ? `Pick from ${line.pick_from_name}` : "Check ORMC stock"}
+                  </>
+                )}
               </div>
             </div>
           </li>

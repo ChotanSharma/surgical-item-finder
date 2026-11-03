@@ -132,3 +132,43 @@ def test_old_database_is_upgraded(tmp_path):
     request = store.create(new_request(SIF_1=1))
     assert store.accept(request.id, "Maria").handled_by == "Maria"
 
+
+
+# ---- items we don't stock, sourced by ORMC ----
+
+CUFF = {"company": "Stryker", "model_number": "5921-218-135", "description": "Disposable tourniquet cuff"}
+
+
+def test_sourcing_line_goes_to_ormc(store):
+    request = store.create(NewRequest(
+        or_id="OR-01", fulfillment="ormc_delivery", lines=[{"source": CUFF, "quantity": 1}],
+    ))
+    line = request.lines[0]
+    assert request.status == "sent"
+    assert line.sourcing is True
+    assert line.name == "Disposable tourniquet cuff"
+    assert line.pick_from is None
+    assert line.pick_from_name == "Not stocked: source from Stryker, model 5921-218-135"
+    assert store.get(request.id).lines[0].sourcing is True  # saved and read back
+
+
+def test_catalog_and_sourcing_lines_mix(store):
+    request = store.create(NewRequest(
+        or_id="OR-01", fulfillment="ormc_delivery",
+        lines=[{"item_number": "SIF-1", "quantity": 1}, {"source": CUFF, "quantity": 2}],
+    ))
+    assert [line.sourcing for line in request.lines] == [False, True]
+
+
+def test_sourcing_cannot_be_self_picked():
+    with pytest.raises(ValidationError):
+        NewRequest(or_id="OR-01", fulfillment="self_pick", lines=[{"source": CUFF, "quantity": 1}])
+
+
+@pytest.mark.parametrize("line", [
+    {"quantity": 1},                                         # neither
+    {"item_number": "SIF-1", "source": CUFF, "quantity": 1},  # both
+])
+def test_line_needs_exactly_one_kind(line):
+    with pytest.raises(ValidationError):
+        NewRequest(or_id="OR-01", fulfillment="ormc_delivery", lines=[line])

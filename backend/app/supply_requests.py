@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from threading import Lock
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 from app.availability import check_stock
 from app.inventory.base import InventoryAdapter
@@ -13,11 +13,26 @@ Fulfillment = Literal["ormc_delivery", "self_pick"]
 Status = Literal["sent", "self_picked", "accepted", "delivered"]
 
 
-class RequestLine(BaseModel):
-    """One cart line, as the nurse's phone sends it."""
+class SourceItem(BaseModel):
+    """A product we don't stock (found in the FDA lookup) that ORMC should get from a supplier."""
 
-    item_number: str
+    company: str = Field(min_length=1, max_length=120)
+    model_number: str | None = Field(None, max_length=80)
+    description: str = Field(min_length=1, max_length=200)
+
+
+class RequestLine(BaseModel):
+    """One cart line, as the nurse's phone sends it: a catalog item OR a product to source."""
+
+    item_number: str | None = None
+    source: SourceItem | None = None
     quantity: int = Field(ge=1, le=100)
+
+    @model_validator(mode="after")
+    def exactly_one_kind(self):
+        if (self.item_number is None) == (self.source is None):
+            raise ValueError("give either item_number or source, not both")
+        return self
 
 
 class NewRequest(BaseModel):
@@ -26,6 +41,12 @@ class NewRequest(BaseModel):
     or_id: str = Field(pattern=r"^OR-\d{2}$")
     fulfillment: Fulfillment
     lines: list[RequestLine] = Field(min_length=1, max_length=20)
+
+    @model_validator(mode="after")
+    def sourcing_needs_ormc(self):
+        if self.fulfillment == "self_pick" and any(line.source for line in self.lines):
+            raise ValueError("items we don't stock can only be sourced by ORMC")
+        return self
 
 
 class PickLine(BaseModel):
@@ -36,6 +57,7 @@ class PickLine(BaseModel):
     quantity: int
     pick_from: str | None       # location id, None if nowhere has enough
     pick_from_name: str | None
+    sourcing: bool = False      # True: not stocked, ORMC gets it from a supplier
 
 
 class SupplyRequest(BaseModel):
@@ -81,6 +103,9 @@ class RequestStore:
     def create(self, new: NewRequest) -> SupplyRequest:
         lines = []
         for line in new.lines:
+            if line.source:
+                lines.append(self._sourcing_line(line.source, line.quantity))
+                continue
             item = self.inventory.get_item(line.item_number)
             if item is None:
                 raise UnknownItemError(line.item_number)
@@ -157,6 +182,19 @@ class RequestStore:
                     (to_status, request_id, from_status, associate),
                 )
         return self.get(request_id) if cursor.rowcount == 1 else None
+
+    @staticmethod
+    def _sourcing_line(source: SourceItem, quantity: int) -> PickLine:
+        model = source.model_number or "no model number"
+        return PickLine(
+            item_number=f"SOURCE {model}",
+            name=source.description,
+            quantity=quantity,
+            pick_from=None,
+            pick_from_name=f"Not stocked: source from {source.company}, model {model}",
+            sourcing=True,
+        )
+
 
     @staticmethod
     def _to_request(row: sqlite3.Row) -> SupplyRequest:

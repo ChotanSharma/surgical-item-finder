@@ -78,3 +78,25 @@ export function deliverRequest(requestId, associate) {
 }
 
 
+// A product we don't stock (from the FDA lookup): ask ORMC to get it from a supplier
+export function sourceRequest(orId, device) {
+  return call("/requests", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      or_id: orId,
+      fulfillment: "ormc_delivery",
+      lines: [
+        {
+          quantity: 1,
+          source: {
+            company: device.company,
+            model_number: device.model_number,
+            description: device.description.slice(0, 200),
+          },
+        },
+      ],
+    }),
+  });
+}
+

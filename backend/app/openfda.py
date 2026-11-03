@@ -15,9 +15,12 @@ from concurrent.futures import ThreadPoolExecutor
 from pydantic import BaseModel
 
 FDA_URL = "https://api.fda.gov/device"
-TIMEOUT_SECONDS = 5  # a slow FDA site must never leave a nurse waiting long
+TIMEOUT_SECONDS = 8  # a slow FDA site must never leave a nurse waiting long
 MAX_WORDS = 6
+CACHE_SIZE = 200  # how many recent searches to remember, so we don't hammer the FDA site
 
+# Answers we already got, so repeat searches are instant: "tourniquet cuff" -> devices
+_cache: dict[str, list["FdaDevice"]] = {}
 
 class FdaError(Exception):
     """The FDA site couldn't be reached or sent something unexpected."""
@@ -95,6 +98,10 @@ def search_devices(description: str, limit: int = 5) -> list[FdaDevice]:
     words = _words(description)
     if not words:
         return []
+    cache_key = " ".join(words).lower()
+    if cache_key in _cache:
+        return _cache[cache_key]
+
     records = _get("udi", f"device_description:({' AND '.join(words)})", limit=25)
 
     # The FDA lists each box size separately, so keep one per company + model
@@ -114,7 +121,12 @@ def search_devices(description: str, limit: int = 5) -> list[FdaDevice]:
             if recalls is not None:
                 device.recalls = recalls
                 device.recalls_checked = True
+    
+    if len(_cache) >= CACHE_SIZE:
+        _cache.clear()  # simple way to stop the cache growing forever
+    _cache[cache_key] = devices
     return devices
+
 
 
 def _recalls_or_none(device: FdaDevice) -> list[FdaRecall] | None:

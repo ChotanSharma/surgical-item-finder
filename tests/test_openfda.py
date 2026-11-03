@@ -22,6 +22,12 @@ OLD_SPONGE = {
 RECALL = {"event_date_initiated": "2018-04-23", "recall_status": "Terminated", "reason_for_recall": "Mislabeled"}
 
 
+@pytest.fixture(autouse=True)
+def empty_cache(monkeypatch):
+    """Every test starts with nothing cached."""
+    monkeypatch.setattr(openfda, "_cache", {})
+
+
 @pytest.fixture
 def fake_fda(monkeypatch):
     """Replaces the network call. Records each (path, search) asked for."""
@@ -100,3 +106,25 @@ def test_network_error_raises_fda_error(monkeypatch):
     monkeypatch.setattr(openfda.urllib.request, "urlopen", offline)
     with pytest.raises(FdaError):
         openfda.search_devices("bone wax")
+
+
+
+def test_repeat_search_uses_the_cache(fake_fda):
+    calls, _ = fake_fda
+    first = openfda.search_devices("Laparotomy sponge")
+    count = len(calls)
+    again = openfda.search_devices("laparotomy  sponge!")  # same words, different typing
+    assert again == first
+    assert len(calls) == count  # no new FDA requests
+
+
+def test_failed_search_is_not_cached(monkeypatch):
+    import urllib.error
+
+    def offline(*args, **kwargs):
+        raise urllib.error.URLError("no internet")
+
+    monkeypatch.setattr(openfda.urllib.request, "urlopen", offline)
+    with pytest.raises(FdaError):
+        openfda.search_devices("bone wax")
+    assert openfda._cache == {}  # so the next try asks the FDA again

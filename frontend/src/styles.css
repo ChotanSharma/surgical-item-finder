@@ -233,3 +233,13 @@ form + .sub { margin-top: 12px; text-align: center; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+
+/* ---- Not in our inventory: FDA products ---- */
+.message.not_in_catalog { background: var(--amber-soft); }
+.fda-card { border: 2px dashed var(--line); box-shadow: none; }
+.fda-card .name { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.stock.muted { color: var(--muted); background: var(--bg); }
+.source { margin-top: 10px; padding: 10px 14px; font-size: 0.95rem; }
+.sourcing-note { color: #8a5a00; font-weight: 600; }

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { findItem, sendRequest } from "./api.js";
+import { findItem, sendRequest, sourceRequest } from "./api.js";
+import FdaCard from "./components/FdaCard.jsx";
 import OrPicker from "./components/OrPicker.jsx";
 import SearchForm from "./components/SearchForm.jsx";
 import ItemCard from "./components/ItemCard.jsx";
@@ -85,7 +86,7 @@ export default function App() {
     setCart((current) => current.filter((line) => line.item.item_number !== itemNumber));
   }
 
-   async function handleSend(fulfillment) {
+  async function handleSend(fulfillment) {
     setSending(true);
     setError(null);
     try {
@@ -101,6 +102,22 @@ export default function App() {
     }
   }
 
+  
+  // Not stocked here: send ORMC a request to get it from a supplier
+  async function handleSource(device) {
+    if (!window.confirm(`Ask ORMC to source "${device.description}" for ${orId}?`)) return;
+    setSending(true);
+    setError(null);
+    try {
+      setSent(await sourceRequest(orId, device));
+      setResult(null);
+      setQuery("");
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setSending(false);
+    }
+  }
 
   const inCart = new Set(cart.map((line) => line.item.item_number));
   
@@ -183,6 +200,22 @@ export default function App() {
               />
             ))}
           </ul>
+          {result.fda_devices?.length > 0 && (
+            <>
+              <h2 className="section">Similar products listed with the FDA</h2>
+              <p className="sub">Not in our inventory. ORMC can source one from the maker or a supplier.</p>
+              <ul className="results">
+                {result.fda_devices.map((device, index) => (
+                  <FdaCard
+                    key={`${device.company}-${device.model_number}-${index}`}
+                    device={device}
+                    onSource={() => handleSource(device)}
+                    sending={sending}
+                  />
+                ))}
+              </ul>
+            </>
+          )}
         </>
       )}
 

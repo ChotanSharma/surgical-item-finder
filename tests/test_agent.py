@@ -23,7 +23,7 @@ def inventory():
 # ---- a fake model client, so tests are free, fast and work offline ----
 
 def tool_call(call_id, name, args):
-    return NS(id=call_id, function=NS(name=name, arguments=json.dumps(args)))
+    return NS(id=call_id, type="function", function=NS(name=name, arguments=json.dumps(args)))
 
 
 def reply(*calls, content=None):
@@ -208,3 +208,26 @@ def test_not_in_catalog_without_lookup_becomes_not_found(inventory):
     assert result.fda_devices == []
     assert "Acme" not in result.message  # the model's made-up product isn't shown
 
+
+
+def test_not_found_without_fda_lookup_gets_one_anyway(inventory):
+    fda = fake_fda(KITTNER)
+    client = FakeClient([
+        reply(tool_call("c1", "find_item", {"query": "kittner"})),
+        reply(tool_call("c2", "answer", {"status": "not_found", "item_numbers": [], "message": "No."})),
+    ])
+    result = agent.run_agent("tourniquet cuff", inventory, client=client, model="test", fda_search=fda)
+    assert result.status == "not_in_catalog"
+    assert result.fda_devices == [KITTNER]
+    assert fda.asked == ["tourniquet cuff"]  # the app searched with the nurse's words
+
+
+def test_not_found_after_fda_lookup_is_kept(inventory):
+    fda = fake_fda()  # FDA has nothing either
+    client = FakeClient([
+        reply(tool_call("c1", "lookup_fda_devices", {"description": "zzz"})),
+        reply(tool_call("c2", "answer", {"status": "not_found", "item_numbers": [], "message": "Nothing."})),
+    ])
+    result = agent.run_agent("zzz", inventory, client=client, model="test", fda_search=fda)
+    assert result.status == "not_found"
+    assert fda.asked == ["zzz"]  # asked once, not twice

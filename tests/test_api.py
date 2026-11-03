@@ -142,3 +142,17 @@ def test_accept_unknown_request():
 def test_accept_needs_a_name():
     request_id = client.post("/requests", json=cart("ormc_delivery")).json()["id"]
     assert client.post(f"/requests/{request_id}/accept", json={"associate": ""}).status_code == 422
+
+
+
+def test_ask_ormc_to_source_an_item_we_dont_stock():
+    body = {
+        "or_id": "OR-03",
+        "fulfillment": "ormc_delivery",
+        "lines": [{"quantity": 1, "source": {
+            "company": "Stryker", "model_number": "5921-218-135", "description": "Tourniquet cuff",
+        }}],
+    }
+    response = client.post("/requests", json=body)
+    assert response.status_code == 201
+    assert response.json()["lines"][0]["sourcing"] is True

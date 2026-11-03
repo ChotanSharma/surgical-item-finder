@@ -1,5 +1,5 @@
 import json
-from typing import Literal
+from typing import Any, Literal
 
 from openai import OpenAI, OpenAIError
 from pydantic import BaseModel
@@ -31,6 +31,7 @@ Rules:
   - Otherwise answer "not_in_catalog": say we don't stock it and ORMC can source it.
     Never say an FDA product is in stock here.
 - status "not_found": nothing fits in the catalog or the FDA lookup.
+- Never answer "not_found" before calling lookup_fda_devices.
 - Only use item numbers returned by find_item or in_our_catalog.
 - This is supply logistics only. Never give medical advice or suggest which item to use.
 - Keep the message under 25 words."""
@@ -179,6 +180,22 @@ def build_answer(
     return AgentResult(status=status, message=args.get("message", ""), items=items, steps=steps)
 
 
+def check_fda_before_giving_up(
+    inventory: InventoryAdapter, query: str, steps: int, fda_search
+) -> AgentResult:
+    """The model said "not found" without trying the FDA, so the app does it for the nurse."""
+    devices, _ = lookup_fda_devices(inventory, query, fda_search)
+    if not devices:
+        return AgentResult(status="not_found", message="Not in our catalog.", items=[], steps=steps)
+    return AgentResult(
+        status="not_in_catalog",
+        message="We don't stock this. Similar products are listed below; ORMC can source one.",
+        items=[],
+        steps=steps,
+        fda_devices=devices,
+    )
+
+
 def run_agent(
     query: str,
     inventory: InventoryAdapter,
@@ -187,7 +204,8 @@ def run_agent(
     fda_search=openfda.search_devices,  # tests pass a fake, so they never call the FDA
 ) -> AgentResult:
     fda_devices: list[FdaDevice] = []  # from the latest lookup_fda_devices call
-    messages = [
+    fda_tried = False
+    messages: list[dict[str, Any]] = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": query},
     ]
@@ -199,7 +217,9 @@ def run_agent(
             )
             message = response.choices[0].message
 
-            if not message.tool_calls:  # model replied in plain text: nudge it
+            if not message.tool_calls or not any(
+                call.type == "function" for call in message.tool_calls
+            ):  # model replied without a usable function call: nudge it
                 messages.append({"role": "assistant", "content": message.content or ""})
                 messages.append({"role": "user", "content": "Use find_item, then answer."})
                 continue
@@ -218,19 +238,25 @@ def run_agent(
                             },
                         }
                         for call in message.tool_calls
+                        if call.type == "function"
                     ],
                 }
             )
             for call in message.tool_calls:
+                if call.type != "function":
+                    continue
                 try:
                     args = json.loads(call.function.arguments or "{}")
                 except json.JSONDecodeError:
                     args = {}
                 if call.function.name == "answer":
+                    if args.get("status") == "not_found" and not fda_tried:
+                        return check_fda_before_giving_up(inventory, query, step, fda_search)
                     return build_answer(inventory, query, args, step, fda_devices)
                 if call.function.name == "find_item":
                     result = find_item(inventory, args.get("query", query))
                 elif call.function.name == "lookup_fda_devices":
+                    fda_tried = True
                     fda_devices, result = lookup_fda_devices(
                         inventory, args.get("description", query), fda_search
                     )

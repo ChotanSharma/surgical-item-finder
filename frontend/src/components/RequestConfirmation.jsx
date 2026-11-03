@@ -60,7 +60,11 @@ export default function RequestConfirmation({ request: first, onDone }) {
           <li key={line.item_number}>
             <strong>{line.quantity} ×</strong> {line.name}
             <div className="number">
-              {line.pick_from_name ? `From ${line.pick_from_name}` : "Not enough stock nearby"}
+              {line.sourcing
+                ? line.pick_from_name
+                : line.pick_from_name
+                  ? `From ${line.pick_from_name}`
+                  : "Not enough stock nearby"}
             </div>
           </li>
         ))}
